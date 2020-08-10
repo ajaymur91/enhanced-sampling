@@ -1,0 +1,6 @@
+gmx_mpi grompp -f ../mdp/minim.mdp -c ../solvate/solv.gro -p ../solvate/system.top -o em.tpr -pp system.top
+mpirun -n 1 gmx_mpi mdrun -v -deffnm em -ntomp 1
+gmx_mpi grompp -f ../mdp/nvt.mdp -c em.gro -p system.top -o nvt.tpr
+mpirun -n 1 gmx_mpi mdrun -v -deffnm nvt -ntomp 1
+gmx_mpi grompp -f ../mdp/npt.mdp -c nvt.gro -p system.top -o npt.tpr
+mpirun -n 1 gmx_mpi mdrun -v -deffnm npt -ntomp 1

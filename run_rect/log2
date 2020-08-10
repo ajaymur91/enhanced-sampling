@@ -1,0 +1,89 @@
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.5.4 (git: Unknown) compiled on Jun 30 2020 at 22:25:32
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /home/ajay/software/spack/opt/spack/linux-ubuntu20.04-zen/gcc-8.4.0/plumed-2.5.4-fj3bvzohxjh542l3z47n75jgif2azgtk/lib/plumed
+PLUMED: For installed feature, see /home/ajay/software/spack/opt/spack/linux-ubuntu20.04-zen/gcc-8.4.0/plumed-2.5.4-fj3bvzohxjh542l3z47n75jgif2azgtk/lib/plumed/src/config/config.txt
+PLUMED: Molecular dynamics engine: gromacs
+PLUMED: Precision of reals: 4
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 18285
+PLUMED: GROMACS-like replica exchange is on
+PLUMED: File suffix: .0
+PLUMED: FILE: ../plumed_rect.dat
+PLUMED: Action GYRATION
+PLUMED:   with label rg
+PLUMED:   GYRATION RADIUS (Rg);
+PLUMED:   atoms involved : 
+PLUMED: 5 12 19 26 33 40 47 54 61 68 75 82 
+PLUMED:   broken molecules will be rebuilt assuming atoms are in the proper order
+PLUMED: Action DISTANCE
+PLUMED:   with label re
+PLUMED:   between atoms 5 82
+PLUMED:   using periodic boundary conditions
+PLUMED: Action PRINT
+PLUMED:   with label @2
+PLUMED:   with stride 500
+PLUMED:   with arguments rg re
+PLUMED:   on file COLVAR
+PLUMED:   with format  %f
+PLUMED: Action METAD
+PLUMED:   with label b
+PLUMED:   with arguments re
+PLUMED:   added component to this action:  b.bias 
+PLUMED:   You are using RECT
+PLUMED:   Binsize not specified, 1/5 of sigma will be be used
+PLUMED:   Gaussian width  0.100000  Gaussian height 0.623585
+PLUMED:   Gaussian deposition pace 500
+PLUMED:   Gaussian file HILLSre
+PLUMED:   Well-Tempered Bias Factor 1.000000
+PLUMED:   Hills relaxation time (tau) 4.000000
+PLUMED:   KbT 2.494339
+PLUMED:   Grid min 0
+PLUMED:   Grid max 5.0
+PLUMED:   Grid bin 250
+PLUMED:   Grid uses spline interpolation
+PLUMED:   added component to this action:  b.work 
+PLUMED:   You are using RECT
+PLUMED:   Bibliography [3][4][5]
+PLUMED: Action METAD
+PLUMED:   with label c
+PLUMED:   with arguments rg
+PLUMED:   added component to this action:  c.bias 
+PLUMED:   You are using RECT
+PLUMED:   Binsize not specified, 1/5 of sigma will be be used
+PLUMED:   Gaussian width  0.100000  Gaussian height 0.623585
+PLUMED:   Gaussian deposition pace 500
+PLUMED:   Gaussian file HILLSrg
+PLUMED:   Well-Tempered Bias Factor 1.000000
+PLUMED:   Hills relaxation time (tau) 4.000000
+PLUMED:   KbT 2.494339
+PLUMED:   Grid min 0
+PLUMED:   Grid max 5.0
+PLUMED:   Grid bin 250
+PLUMED:   Grid uses spline interpolation
+PLUMED:   added component to this action:  c.work 
+PLUMED:   You are using concurrent metadynamics
+PLUMED:   You are using RECT
+PLUMED:   Bibliography [3][4][5]
+PLUMED: END FILE: ../plumed_rect.dat
+PLUMED: Timestep: 0.002000
+PLUMED: KbT: 2.494339
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED:   [5] Gil-Ley and Bussi, J. Chem. Theory Comput. 11, 1077 (2015)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minumum      Maximum
+PLUMED:                                                    1     0.399998     0.399998     0.399998     0.399998
+PLUMED: 1 Prepare dependencies                          5019     0.002330     0.000000     0.000000     0.000003
+PLUMED: 2 Sharing data                                  5001     0.130125     0.000026     0.000023     0.000865
+PLUMED: 3 Waiting for data                              5019     0.005449     0.000001     0.000001     0.000012
+PLUMED: 4 Calculating (forward loop)                    5019     0.031646     0.000006     0.000005     0.000025
+PLUMED: 5 Applying (backward loop)                      5010     0.185537     0.000037     0.000036     0.000173
+PLUMED: 6 Update                                        5010     0.008506     0.000002     0.000001     0.000202

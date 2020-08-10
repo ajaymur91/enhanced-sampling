@@ -1,0 +1,1886 @@
+;
+;	File 'topol.top' was generated
+;	By user: ajay (1000)
+;	On host: ajay-MS-7C37
+;	At date: Mon Aug 10 09:36:23 2020
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2019.4 (-:
+;	
+;	Executable:   /home/ajay/software/spack/opt/spack/linux-ubuntu20.04-zen/gcc-8.4.0/gromacs-2019.4-annaxisunwfyuy4dfdwhgz73zpx4oyzl/bin/gmx_mpi
+;	Data prefix:  /home/ajay/software/spack/opt/spack/linux-ubuntu20.04-zen/gcc-8.4.0/gromacs-2019.4-annaxisunwfyuy4dfdwhgz73zpx4oyzl
+;	Working dir:  /media/Data/work/gromacs/rest2/system
+;	Command line:
+;	  gmx_mpi pdb2gmx -f pro.pdb -ignh
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+******************************************************************** 
+* The original ffamber ports were written by Eric J. Sorin,        * 
+* CSU Long Beach, Dept. of Chem & Biochem, and have now been       * 
+* integrated with the standard gromacs distribution.               * 
+* (Please don't blame Eric for errors we might have introduced.)   * 
+* For the implementation/validation, please read/cite:             *  
+* Sorin & Pande (2005). Biophys. J. 88(4), 2472-2493.              * 
+* For related material and updates, please consult                 * 
+* http://chemistry.csulb.edu/ffamber/                              * 
+******************************************************************** 
+
+
+[ defaults ] 
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333 
+
+[ atomtypes ] 
+; name      at.num  mass     charge ptype  sigma      epsilon
+Br 35 79.90 0.0000 A 3.95559e-01 1.33888e+00 ; Converted from parm99.dat 
+Br_ Br 79.90 0.0000 A 0.395559 1.33888  ; scaled
+C 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+C_ C 12.01 0.0000 A 0.339967 0.359824  ; scaled
+CA 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+CA_ CA 12.01 0.0000 A 0.339967 0.359824  ; scaled
+CB 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+CB_ CB 12.01 0.0000 A 0.339967 0.359824  ; scaled
+CC 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+CC_ CC 12.01 0.0000 A 0.339967 0.359824  ; scaled
+CK 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+CK_ CK 12.01 0.0000 A 0.339967 0.359824  ; scaled
+CM 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+CM_ CM 12.01 0.0000 A 0.339967 0.359824  ; scaled
+CN 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+CN_ CN 12.01 0.0000 A 0.339967 0.359824  ; scaled
+CQ 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+CQ_ CQ 12.01 0.0000 A 0.339967 0.359824  ; scaled
+CR 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+CR_ CR 12.01 0.0000 A 0.339967 0.359824  ; scaled
+CT 6 12.01 0.0000 A 3.39967e-01 4.57730e-01 
+CT_ CT 12.01 0.0000 A 0.339967 0.45773  ; scaled
+CV 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+CV_ CV 12.01 0.0000 A 0.339967 0.359824  ; scaled
+CW 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+CW_ CW 12.01 0.0000 A 0.339967 0.359824  ; scaled
+C* 6 12.01 0.0000 A 3.39967e-01 3.59824e-01 
+C*_ C* 12.01 0.0000 A 0.339967 0.359824  ; scaled
+C0 20 40.08 0.0000 A 3.05240e-01 1.92376e+00 
+C0_ C0 40.08 0.0000 A 0.30524 1.92376  ; scaled
+F 9 19.00 0.0000 A 3.11815e-01 2.55224e-01 
+F_ F 19.00 0.0000 A 0.311815 0.255224  ; scaled
+H 1 1.008 0.0000 A 1.06908e-01 6.56888e-02 
+H_ H 1.008 0.0000 A 0.106908 0.0656888  ; scaled
+HC 1 1.008 0.0000 A 2.64953e-01 6.56888e-02 
+HC_ HC 1.008 0.0000 A 0.264953 0.0656888  ; scaled
+H1 1 1.008 0.0000 A 2.47135e-01 6.56888e-02 
+H1_ H1 1.008 0.0000 A 0.247135 0.0656888  ; scaled
+H2 1 1.008 0.0000 A 2.29317e-01 6.56888e-02 
+H2_ H2 1.008 0.0000 A 0.229317 0.0656888  ; scaled
+H3 1 1.008 0.0000 A 2.11499e-01 6.56888e-02 
+H3_ H3 1.008 0.0000 A 0.211499 0.0656888  ; scaled
+HA 1 1.008 0.0000 A 2.59964e-01 6.27600e-02 
+HA_ HA 1.008 0.0000 A 0.259964 0.06276  ; scaled
+H4 1 1.008 0.0000 A 2.51055e-01 6.27600e-02 
+H4_ H4 1.008 0.0000 A 0.251055 0.06276  ; scaled
+H5 1 1.008 0.0000 A 2.42146e-01 6.27600e-02 
+H5_ H5 1.008 0.0000 A 0.242146 0.06276  ; scaled
+HO 1 1.008 0.0000 A 0.00000e+00 0.00000e+00 
+HO_ HO 1.008 0.0000 A 0 0  ; scaled
+HS 1 1.008 0.0000 A 1.06908e-01 6.56888e-02 
+HS_ HS 1.008 0.0000 A 0.106908 0.0656888  ; scaled
+HW 1 1.008 0.0000 A 0.00000e+00 0.00000e+00 
+HW_ HW 1.008 0.0000 A 0 0  ; scaled
+HP 1 1.008 0.0000 A 1.95998e-01 6.56888e-02 
+HP_ HP 1.008 0.0000 A 0.195998 0.0656888  ; scaled
+I 53 126.9 0.0000 A 4.18722e-01 1.67360e+00 
+I_ I 126.9 0.0000 A 0.418722 1.6736  ; scaled
+Cl 17 35.45 0.0000 A 4.40104e-01 4.18400e-01 
+Cl_ Cl 35.45 0.0000 A 0.440104 0.4184  ; scaled
+Na 11 22.99 0.0000 A 3.32840e-01 1.15897e-02 
+Na_ Na 22.99 0.0000 A 0.33284 0.0115897  ; scaled
+IB 0 131.0 0.0000 A 8.90899e-01 4.18400e-01 
+IB_ IB 131.0 0.0000 A 0.890899 0.4184  ; scaled
+MG 12 24.305 0.0000 A 1.41225e-01 3.74342e+00 
+MG_ MG 24.305 0.0000 A 0.141225 3.74342  ; scaled
+N 7 14.01 0.0000 A 3.25000e-01 7.11280e-01 
+N_ N 14.01 0.0000 A 0.325 0.71128  ; scaled
+NA 7 14.01 0.0000 A 3.25000e-01 7.11280e-01 
+NA_ NA 14.01 0.0000 A 0.325 0.71128  ; scaled
+NB 7 14.01 0.0000 A 3.25000e-01 7.11280e-01 
+NB_ NB 14.01 0.0000 A 0.325 0.71128  ; scaled
+NC 7 14.01 0.0000 A 3.25000e-01 7.11280e-01 
+NC_ NC 14.01 0.0000 A 0.325 0.71128  ; scaled
+N2 7 14.01 0.0000 A 3.25000e-01 7.11280e-01 
+N2_ N2 14.01 0.0000 A 0.325 0.71128  ; scaled
+N3 7 14.01 0.0000 A 3.25000e-01 7.11280e-01 
+N3_ N3 14.01 0.0000 A 0.325 0.71128  ; scaled
+N* 7 14.01 0.0000 A 3.25000e-01 7.11280e-01 
+N*_ N* 14.01 0.0000 A 0.325 0.71128  ; scaled
+O 8 16.00 0.0000 A 2.95992e-01 8.78640e-01 
+O_ O 16.00 0.0000 A 0.295992 0.87864  ; scaled
+OW 8 16.00 0.0000 A 3.15061e-01 6.36386e-01 
+OW_ OW 16.00 0.0000 A 0.315061 0.636386  ; scaled
+OH 8 16.00 0.0000 A 3.06647e-01 8.80314e-01 
+OH_ OH 16.00 0.0000 A 0.306647 0.880314  ; scaled
+OS 8 16.00 0.0000 A 3.00001e-01 7.11280e-01 
+OS_ OS 16.00 0.0000 A 0.300001 0.71128  ; scaled
+O2 8 16.00 0.0000 A 2.95992e-01 8.78640e-01 
+O2_ O2 16.00 0.0000 A 0.295992 0.87864  ; scaled
+P 15 30.97 0.0000 A 3.74177e-01 8.36800e-01 
+P_ P 30.97 0.0000 A 0.374177 0.8368  ; scaled
+S 16 32.06 0.0000 A 3.56359e-01 1.04600e+00 
+S_ S 32.06 0.0000 A 0.356359 1.046  ; scaled
+SH 16 32.06 0.0000 A 3.56359e-01 1.04600e+00 
+SH_ SH 32.06 0.0000 A 0.356359 1.046  ; scaled
+CU 29 63.55 0.0000 A 3.39967e-01 3.59824e-01 
+CU_ CU 63.55 0.0000 A 0.339967 0.359824  ; scaled
+K 19 39.10 0.0000 A 4.73602e-01 1.37235e-03 
+K_ K 39.10 0.0000 A 0.473602 0.00137235  ; scaled
+Rb 37 85.47 0.0000 A 5.26699e-01 7.11280e-04 
+Rb_ Rb 85.47 0.0000 A 0.526699 0.00071128  ; scaled
+Cs 55 132.91 0.0000 A 6.04920e-01 3.37230e-04 
+Cs_ Cs 132.91 0.0000 A 0.60492 0.00033723  ; scaled
+; spc water - use only with spc.itp & settles
+OW_spc 8 15.9994 0.0000 A 3.16557e-01 6.50629e-01 
+OW_spc_ OW_spc 15.9994 0.0000 A 0.316557 0.650629  ; scaled
+HW_spc 1 1.0080 0.0000 A 0.00000e+00 0.00000e+00 
+HW_spc_ HW_spc 1.0080 0.0000 A 0 0  ; scaled
+Li 3 6.94 0.0000 A 2.02590e-01 7.65672e-02 
+Li_ Li 6.94 0.0000 A 0.20259 0.0765672  ; scaled
+Zn 30 65.4 0.0000 A 1.95998e-01 5.23000e-02 
+Zn_ Zn 65.4 0.0000 A 0.195998 0.0523  ; scaled
+;tip4p-EW
+HW_tip4pew 1 1.008 0.0000 A 0.00000e+00 0.00000e+00 
+HW_tip4pew_ HW_tip4pew 1.008 0.0000 A 0 0  ; scaled
+OW_tip4pew 8 16.00 0.0000 A 3.16435e-01 6.80946e-01 
+OW_tip4pew_ OW_tip4pew 16.00 0.0000 A 0.316435 0.680946  ; scaled
+; tip4p
+HW_tip4p 1 1.008 0.0000 A 0.00000e+00 0.00000e+00 
+HW_tip4p_ HW_tip4p 1.008 0.0000 A 0 0  ; scaled
+OW_tip4p 8 16.00 0.0000 A 3.15365e-01 6.48520e-01 
+OW_tip4p_ OW_tip4p 16.00 0.0000 A 0.315365 0.64852  ; scaled
+;tip5p
+HW_tip5p 1 1.008 0.0000 A 0.00000e+00 0.00000e+00 
+HW_tip5p_ HW_tip5p 1.008 0.0000 A 0 0  ; scaled
+OW_tip5p 8 16.00 0.0000 A 3.12000e-01 6.69440e-01 
+OW_tip5p_ OW_tip5p 16.00 0.0000 A 0.312 0.66944  ; scaled
+; dummy defs
+; MW=Dummy mass for tip4p/EW/5p water extra point charge
+MW 0 0.0000 0.0000 D 0.00000e+00 0.00000e+00 
+MW_ MW 0.0000 0.0000 D 0 0  ; scaled
+; Dummy masses for rigid CH3 and NH3 groups
+MCH3 0 0.0000 0.0000 A 0.00000e+00 0.00000e+00 
+MCH3_ MCH3 0.0000 0.0000 A 0 0  ; scaled
+MNH3 0 0.0000 0.0000 A 0.00000e+00 0.00000e+00 
+MNH3_ MNH3 0.0000 0.0000 A 0 0  ; scaled
+[ bondtypes ] 
+; i    j  func       b0          kb
+  C  C          1     0.1525   259408.0  ; new99
+  C  OS         1     0.1323   376560.0  ; new99
+  C  H4         1     0.1080   307105.6  ; new99
+  C  H5         1     0.1080   307105.6  ; new99
+  CA OH         1     0.1364   376560.0  ; new99
+  CM OS         1     0.1240   401664.0  ; new99
+  Cl CT         1     0.1766   194137.6  ; new99
+  Br CT         1     0.1944   133051.2  ; new99
+  I  CT         1     0.2166   123846.4  ; new99
+  F  CA         1     0.1359   323004.8  ; new99
+  Cl CA         1     0.1727   161502.4  ; new99
+  I  CA         1     0.2075   143092.8  ; new99
+  Br CA         1     0.1890   143929.6  ; new99
+  OW HW         1    0.09572   462750.4  ; P water
+  HW HW         1    0.15136   462750.4  ; P water
+  C  CA         1    0.14090   392459.2  ; 7,(1986),230; TYR
+  C  CB         1    0.14190   374049.6  ; 7,(1986),230; GUA
+  C  CM         1    0.14440   343088.0  ; 7,(1986),230; THY,URA
+  C  CT         1    0.15220   265265.6  ; 7,(1986),230; AA
+  C  N*         1    0.13830   354803.2  ; 7,(1986),230; CYT,URA
+  C  NA         1    0.13880   349782.4  ; 7,(1986),230; GUA.URA
+  C  NC         1    0.13580   382417.6  ; 7,(1986),230; CYT
+  C  O          1    0.12290   476976.0  ; 7,(1986),230; AA,CYT,GUA,THY,URA
+  C  O2         1    0.12500   548940.8  ; 7,(1986),230; GLU,ASP
+  C  OH         1    0.13640   376560.0  ; 7,(1986),230; TYR
+  CA CA         1    0.14000   392459.2  ; 7,(1986),230; BENZENE,PHE,TRP,TYR
+  CA CB         1    0.14040   392459.2  ; 7,(1986),230; ADE,TRP
+  CA CM         1    0.14330   357313.6  ; 7,(1986),230; CYT
+  CA CT         1    0.15100   265265.6  ; 7,(1986),230; PHE,TYR
+  CA HA         1    0.10800   307105.6  ; ged from 340. bsd on C6H6 nmodes; PHE,TRP,TYR
+  CA H4         1    0.10800   307105.6  ; ged from 340. bsd on C6H6 nmodes; no assigned
+  CA N2         1    0.13400   402500.8  ; 7,(1986),230; ARG,CYT,GUA
+  CA NA         1    0.13810   357313.6  ; 7,(1986),230; GUA
+  CA NC         1    0.13390   404174.4  ; 7,(1986),230; ADE,CYT,GUA
+  CB CB         1    0.13700   435136.0  ; 7,(1986),230; ADE,GUA
+  CB N*         1    0.13740   364844.8  ; 7,(1986),230; ADE,GUA
+  CB NB         1    0.13910   346435.2  ; 7,(1986),230; ADE,GUA
+  CB NC         1    0.13540   385764.8  ; 7,(1986),230; ADE,GUA
+  CK H5         1    0.10800   307105.6  ; ged from 340. bsd on C6H6 nmodes; ADE,GUA
+  CK N*         1    0.13710   368192.0  ; 7,(1986),230; ADE,GUA
+  CK NB         1    0.13040   442667.2  ; 7,(1986),230; ADE,GUA
+  CM CM         1    0.13500   459403.2  ; 7,(1986),230; CYT,THY,URA
+  CM CT         1    0.15100   265265.6  ; 7,(1986),230; THY
+  CM HA         1    0.10800   307105.6  ; ged from 340. bsd on C6H6 nmodes; CYT,URA
+  CM H4         1    0.10800   307105.6  ; ged from 340. bsd on C6H6 nmodes; CYT,URA
+  CM H5         1    0.10800   307105.6  ; ged from 340. bsd on C6H6 nmodes; not assigned
+  CM N*         1    0.13650   374886.4  ; 7,(1986),230; CYT,THY,URA
+  CQ H5         1    0.10800   307105.6  ; ged from 340. bsd on C6H6 nmodes; ADE
+  CQ NC         1    0.13240   420073.6  ; 7,(1986),230; ADE
+  CT CT         1    0.15260   259408.0  ; 7,(1986),230; AA, SUGARS
+  CT HC         1    0.10900   284512.0  ; ged from 331 bsd on NMA nmodes; AA, SUGARS
+  CT H1         1    0.10900   284512.0  ; ged from 331 bsd on NMA nmodes; AA, RIBOSE
+  CT H2         1    0.10900   284512.0  ; ged from 331 bsd on NMA nmodes; SUGARS
+  CT H3         1    0.10900   284512.0  ; ged from 331 bsd on NMA nmodes; not assigned
+  CT HP         1    0.10900   284512.0  ; nged from 331; AA-lysine, methyl ammonium cation
+  CT N*         1    0.14750   282001.6  ; 7,(1986),230; ADE,CYT,GUA,THY,URA
+  CT N2         1    0.14630   282001.6  ; 7,(1986),230; ARG
+  CT OH         1    0.14100   267776.0  ; 7,(1986),230; SUGARS
+  CT OS         1    0.14100   267776.0  ; 7,(1986),230; NUCLEIC ACIDS
+  H  N2         1    0.10100   363171.2  ; 7,(1986),230; ADE,CYT,GUA,ARG
+  H  N*         1    0.10100   363171.2  ; plain unmethylated bases ADE,CYT,GUA,ARG
+  H  NA         1    0.10100   363171.2  ; 7,(1986),230; GUA,URA,HIS
+  HO OH         1    0.09600   462750.4  ; 7,(1986),230; SUGARS,SER,TYR
+  HO OS         1    0.09600   462750.4  ; 7,(1986),230; NUCLEOTIDE ENDS
+  O2 P          1    0.14800   439320.0  ; 7,(1986),230; NA PHOSPHATES
+  OH P          1    0.16100   192464.0  ; 7,(1986),230; NA PHOSPHATES
+  OS P          1    0.16100   192464.0  ; 7,(1986),230; NA PHOSPHATES
+  C* HC         1    0.10800   307105.6  ; ged from 340. bsd on C6H6 nmodes, not needed AA
+  C  N          1    0.13350   410032.0  ; 7,(1986),230; AA
+  C* CB         1    0.14590   324678.4  ; 7,(1986),230; TRP
+  C* CT         1    0.14950   265265.6  ; 7,(1986),230; TRP
+  C* CW         1    0.13520   456892.8  ; 7,(1986),230; TRP
+  CA CN         1    0.14000   392459.2  ; 7,(1986),230; TRP
+  CB CN         1    0.14190   374049.6  ; 7,(1986),230; TRP
+  CC CT         1    0.15040   265265.6  ; 7,(1986),230; HIS
+  CC CV         1    0.13750   428441.6  ; 7,(1986),230; HIS(delta)
+  CC CW         1    0.13710   433462.4  ; 7,(1986),230; HIS(epsilon)
+  CC NA         1    0.13850   353129.6  ; 7,(1986),230; HIS
+  CC NB         1    0.13940   343088.0  ; 7,(1986),230; HIS
+  CN NA         1    0.13800   358150.4  ; 7,(1986),230; TRP
+  CR H5         1    0.10800   307105.6  ; ged from 340. bsd on C6H6 nmodes;HIS
+  CR NA         1    0.13430   399153.6  ; 7,(1986),230; HIS
+  CR NB         1    0.13350   408358.4  ; 7,(1986),230; HIS
+  CT N          1    0.14490   282001.6  ; 7,(1986),230; AA
+  CT N3         1    0.14710   307105.6  ; 7,(1986),230; LYS
+  CT S          1    0.18100   189953.6  ; ged from 222.0 based on dimethylS nmodes
+  CT SH         1    0.18100   198321.6  ; ged from 222.0 based on methanethiol nmodes
+  CV H4         1    0.10800   307105.6  ; ged from 340. bsd on C6H6 nmodes; HIS
+  CV NB         1    0.13940   343088.0  ; 7,(1986),230; HIS
+  CW H4         1    0.10800   307105.6  ; ged from 340. bsd on C6H6 nmodes;HIS(epsilon,+)
+  CW NA         1    0.13810   357313.6  ; 7,(1986),230; HIS,TRP
+  H  N          1    0.10100   363171.2  ; 7,(1986),230; AA
+  H  N3         1    0.10100   363171.2  ; 7,(1986),230; LYS    
+  HS SH         1    0.13360   229283.2  ; 7,(1986),230; CYS
+  S  S          1    0.20380   138908.8  ; 7,(1986),230; CYX   (SCHERAGA)
+  CT F          1    0.13800   307105.6  ; 13,(1992),963;CF4; R0=1.332 FOR CHF3
+
+
+
+[ constrainttypes ] 
+; this section is implemented manually from bond & angle values
+
+; constraints for rigid CH3 groups
+ MCH3   CT      2    0.166426 
+ MCH3   S       2    0.193875 
+ MCH3   MCH3    2    0.092163 
+; constraints for rigid NH3 groups
+ MNH3   CT      2    0.158254 
+ MNH3   MNH3    2    0.080229 
+
+; angle-derived constraints for OH and SH groups in proteins
+; The constraint A-C is calculated from the angle A-B-C and bonds A-B, B-C.
+  C     HO      2    0.195074 
+  CA    HO      2    0.195074 
+  CT    HO      2    0.194132 
+  CT    HS      2    0.235935 
+
+
+
+[ angletypes ] 
+;  i    j    k  func       th0       cth
+HW  OW  HW           1   104.520    836.800  ; TIP3P water
+HW  HW  OW           1   127.740      0.000  ; (found in crystallographic water with 3 bonds)
+C   C   O            1   120.000    669.440  ; new99
+C   C   OH           1   120.000    669.440  ; new99
+CT  C   CT           1   117.000    527.184  ; new99
+CT  C   OS           1   115.000    669.440  ; new99
+O   C   OS           1   125.000    669.440  ; new99
+H4  C   C            1   120.000    418.400  ; new99
+H4  C   CM           1   115.000    418.400  ; new99
+H4  C   CT           1   115.000    418.400  ; new99
+H4  C   O            1   120.000    418.400  ; new99
+H4  C   OH           1   120.000    418.400  ; new99
+H5  C   N            1   120.000    418.400  ; new99
+H5  C   O            1   119.000    418.400  ; new99
+H5  C   OH           1   107.000    418.400  ; new99
+H5  C   OS           1   107.000    418.400  ; new99
+CA  CA  OH           1   120.000    585.760  ; new99
+CA  OH  HO           1   113.000    418.400  ; new99
+F   CA  CA           1   121.000    585.760  ; new99
+Cl  CA  CA           1   118.800    585.760  ; new99
+Br  CA  CA           1   118.800    585.760  ; new99
+I   CA  CA           1   118.800    585.760  ; new99
+CM  CM  OS           1   125.000    669.440  ; new99
+H4  CM  OS           1   113.000    418.400  ; new99
+HA  CM  HA           1   120.000    292.880  ; new99
+HA  CM  CT           1   120.000    418.400  ; new99
+H1  CT  CM           1   109.500    418.400  ; new99
+HC  CT  CM           1   109.500    418.400  ; new99
+C   CT  OS           1   109.500    502.080  ; new99
+CM  CT  CT           1   111.000    527.184  ; new99
+CM  CT  OS           1   109.500    418.400  ; new99
+CT  CT  CA           1   114.000    527.184  ; new99
+OS  CT  OS           1   101.000    502.080  ; new99
+F   CT  CT           1   109.000    418.400  ; new99
+F   CT  H2           1   109.500    418.400  ; new99
+Cl  CT  CT           1   108.500    418.400  ; new99
+Cl  CT  H1           1   108.500    418.400  ; new99
+Br  CT  CT           1   108.000    418.400  ; new99
+Br  CT  H1           1   106.500    418.400  ; new99
+I   CT  CT           1   106.000    418.400  ; new99
+CB  C   NA           1   111.300    585.760  ; NA
+CB  C   O            1   128.800    669.440  ; 
+CM  C   NA           1   114.100    585.760  ; 
+CM  C   O            1   125.300    669.440  ; 
+CT  C   O            1   120.400    669.440  ; 
+CT  C   O2           1   117.000    585.760  ; 
+CT  C   OH           1   110.000    669.440  ; new99
+N*  C   NA           1   115.400    585.760  ; 
+N*  C   NC           1   118.600    585.760  ; 
+N*  C   O            1   120.900    669.440  ; 
+NA  C   O            1   120.600    669.440  ; 
+NC  C   O            1   122.500    669.440  ; 
+CT  C   N            1   116.600    585.760  ; AA general
+N   C   O            1   122.900    669.440  ; AA general
+O   C   O            1   126.000    669.440  ; AA COO- terminal residues
+O2  C   O2           1   126.000    669.440  ; AA GLU            (SCH JPC 79,2379)
+O   C   OH           1   120.000    669.440  ; 
+CA  C   CA           1   120.000    527.184  ; changed from 85.0  bsd on C6H6 nmodes; AA tyr
+CA  C   OH           1   120.000    585.760  ; AA tyr
+C   CA  CA           1   120.000    527.184  ; changed from 85.0  bsd on C6H6 nmodes
+CA  CA  CA           1   120.000    527.184  ; changed from 85.0  bsd on C6H6 nmodes
+CA  CA  CB           1   120.000    527.184  ; changed from 85.0  bsd on C6H6 nmodes
+CA  CA  CT           1   120.000    585.760  ; 
+CA  CA  HA           1   120.000    418.400  ; new99
+CA  CA  H4           1   120.000    418.400  ; new99
+CB  CA  HA           1   120.000    418.400  ; new99
+CB  CA  H4           1   120.000    418.400  ; new99
+CB  CA  N2           1   123.500    585.760  ; 
+CB  CA  NC           1   117.300    585.760  ; 
+CM  CA  N2           1   120.100    585.760  ; 
+CM  CA  NC           1   121.500    585.760  ; 
+N2  CA  NA           1   116.000    585.760  ; 
+N2  CA  NC           1   119.300    585.760  ; 
+NA  CA  NC           1   123.300    585.760  ; 
+C   CA  HA           1   120.000    418.400  ; new99 tyr
+N2  CA  N2           1   120.000    585.760  ; AA arg
+CN  CA  HA           1   120.000    418.400  ; new99 trp
+CA  CA  CN           1   120.000    527.184  ; changed from 85.0  bsd on C6H6 nmodes; AA trp
+C   CB  CB           1   119.200    527.184  ; changed from 85.0  bsd on C6H6 nmodes; NA gua
+C   CB  NB           1   130.000    585.760  ; 
+CA  CB  CB           1   117.300    527.184  ; changed from 85.0  bsd on C6H6 nmodes; NA ade
+CA  CB  NB           1   132.400    585.760  ; 
+CB  CB  N*           1   106.200    585.760  ; 
+CB  CB  NB           1   110.400    585.760  ; 
+CB  CB  NC           1   127.700    585.760  ; 
+N*  CB  NC           1   126.200    585.760  ; 
+C*  CB  CA           1   134.900    527.184  ; changed from 85.0  bsd on C6H6 nmodes; AA trp
+C*  CB  CN           1   108.800    527.184  ; changed from 85.0  bsd on C6H6 nmodes; AA trp
+CA  CB  CN           1   116.200    527.184  ; changed from 85.0  bsd on C6H6 nmodes; AA trp
+H5  CK  N*           1   123.050    418.400  ; new99
+H5  CK  NB           1   123.050    418.400  ; new99
+N*  CK  NB           1   113.900    585.760  ; 
+C   CM  CM           1   120.700    527.184  ; changed from 85.0  bsd on C6H6 nmodes; NA thy
+C   CM  CT           1   119.700    585.760  ; 
+C   CM  HA           1   119.700    418.400  ; new99
+C   CM  H4           1   119.700    418.400  ; new99
+CA  CM  CM           1   117.000    527.184  ; changed from 85.0  bsd on C6H6 nmodes; NA cyt
+CA  CM  HA           1   123.300    418.400  ; new99
+CA  CM  H4           1   123.300    418.400  ; new99
+CM  CM  CT           1   119.700    585.760  ; 
+CM  CM  HA           1   119.700    418.400  ; new99
+CM  CM  H4           1   119.700    418.400  ; new99
+CM  CM  N*           1   121.200    585.760  ; 
+H4  CM  N*           1   119.100    418.400  ; new99
+H5  CQ  NC           1   115.450    418.400  ; new99
+NC  CQ  NC           1   129.100    585.760  ; 
+CM  CT  HC           1   109.500    418.400  ; changed based on NMA nmodes
+CT  CT  CT           1   109.500    334.720  ; 
+CT  CT  HC           1   109.500    418.400  ; changed based on NMA nmodes
+CT  CT  H1           1   109.500    418.400  ; changed based on NMA nmodes
+CT  CT  H2           1   109.500    418.400  ; changed based on NMA nmodes
+CT  CT  HP           1   109.500    418.400  ; changed based on NMA nmodes
+CT  CT  N*           1   109.500    418.400  ; 
+CT  CT  OH           1   109.500    418.400  ; 
+CT  CT  OS           1   109.500    418.400  ; 
+HC  CT  HC           1   109.500    292.880  ; 
+H1  CT  H1           1   109.500    292.880  ; 
+HP  CT  HP           1   109.500    292.880  ; AA lys, ch3nh4+
+H2  CT  N*           1   109.500    418.400  ; changed based on NMA nmodes
+H1  CT  N*           1   109.500    418.400  ; changed based on NMA nmodes
+H1  CT  OH           1   109.500    418.400  ; changed based on NMA nmodes 
+H1  CT  OS           1   109.500    418.400  ; changed based on NMA nmodes 
+H2  CT  OS           1   109.500    418.400  ; changed based on NMA nmodes
+N*  CT  OS           1   109.500    418.400  ; 
+H1  CT  N            1   109.500    418.400  ; AA general  changed based on NMA nmodes
+C   CT  H1           1   109.500    418.400  ; AA general  changed based on NMA nmodes
+C   CT  HP           1   109.500    418.400  ; AA zwitterion  changed based on NMA nmodes
+H1  CT  S            1   109.500    418.400  ; AA cys     changed based on NMA nmodes
+H1  CT  SH           1   109.500    418.400  ; AA cyx     changed based on NMA nmodes
+CT  CT  S            1   114.700    418.400  ; AA cyx            (SCHERAGA  JPC 79,1428)
+CT  CT  SH           1   108.600    418.400  ; AA cys
+H2  CT  H2           1   109.500    292.880  ; AA lys
+H1  CT  N2           1   109.500    418.400  ; AA arg     changed based on NMA nmodes
+HP  CT  N3           1   109.500    418.400  ; AA lys, ch3nh3+, changed based on NMA nmodes
+CA  CT  CT           1   114.000    527.184  ; AA phe tyr          (SCH JPC  79,2379)
+C   CT  HC           1   109.500    418.400  ; AA gln      changed based on NMA nmodes
+C   CT  N            1   110.100    527.184  ; AA general
+CT  CT  N2           1   111.200    669.440  ; AA arg             (JCP 76, 1439)
+CT  CT  N            1   109.700    669.440  ; AA ala, general    (JACS 94, 2657)
+C   CT  CT           1   111.100    527.184  ; AA general
+CA  CT  HC           1   109.500    418.400  ; AA tyr     changed based on NMA nmodes
+CT  CT  N3           1   111.200    669.440  ; AA lys             (JCP 76, 1439)
+CC  CT  CT           1   113.100    527.184  ; AA his
+CC  CT  HC           1   109.500    418.400  ; AA his     changed based on NMA nmodes
+C   CT  N3           1   111.200    669.440  ; AA amino terminal residues
+C*  CT  CT           1   115.600    527.184  ; AA trp
+C*  CT  HC           1   109.500    418.400  ; AA trp    changed based on NMA nmodes
+CT  CC  NA           1   120.000    585.760  ; AA his
+CT  CC  CV           1   120.000    585.760  ; AA his
+CT  CC  NB           1   120.000    585.760  ; AA his
+CV  CC  NA           1   120.000    585.760  ; AA his
+CW  CC  NA           1   120.000    585.760  ; AA his
+CW  CC  NB           1   120.000    585.760  ; AA his
+CT  CC  CW           1   120.000    585.760  ; AA his
+H5  CR  NA           1   120.000    418.400  ; new99 his
+H5  CR  NB           1   120.000    418.400  ; new99 his
+NA  CR  NA           1   120.000    585.760  ; AA his
+NA  CR  NB           1   120.000    585.760  ; AA his
+CC  CV  H4           1   120.000    418.400  ; new99 his
+CC  CV  NB           1   120.000    585.760  ; AA his
+H4  CV  NB           1   120.000    418.400  ; new99 his
+CC  CW  H4           1   120.000    418.400  ; new99 his
+CC  CW  NA           1   120.000    585.760  ; AA his
+H4  CW  NA           1   120.000    418.400  ; new99 his
+C*  CW  H4           1   120.000    418.400  ; new99 trp
+C*  CW  NA           1   108.700    585.760  ; AA trp
+CT  C*  CW           1   125.000    585.760  ; AA trp
+CB  C*  CT           1   128.600    585.760  ; AA trp
+CB  C*  CW           1   106.400    527.184  ; changed from 85.0  bsd on C6H6 nmodes; AA trp
+CA  CN  NA           1   132.800    585.760  ; AA trp
+CB  CN  NA           1   104.400    585.760  ; AA trp
+CA  CN  CB           1   122.700    527.184  ; changed from 85.0  bsd on C6H6 nmodes; AA trp
+C   N   CT           1   121.900    418.400  ; AA general
+C   N   H            1   120.000    418.400  ; new99 general, gln, asn,changed based on NMA nmodes
+CT  N   H            1   118.040    418.400  ; new99 general,     changed based on NMA nmodes
+CT  N   CT           1   118.000    418.400  ; AA pro             (DETAR JACS 99,1232)
+H   N   H            1   120.000    292.880  ; ade,cyt,gua,gln,asn     **
+C   N*  CM           1   121.600    585.760  ; 
+C   N*  CT           1   117.600    585.760  ; 
+C   N*  H            1   119.200    418.400  ; new99
+CB  N*  CK           1   105.400    585.760  ; 
+CB  N*  CT           1   125.800    585.760  ; 
+CB  N*  H            1   125.800    418.400  ; new99
+CK  N*  CT           1   128.800    585.760  ; 
+CK  N*  H            1   128.800    418.400  ; new99  for unmethylated n.a. bases,chngd bsd NMA nmodes
+CM  N*  CT           1   121.200    585.760  ; 
+CM  N*  H            1   121.200    418.400  ; new99  for unmethylated n.a. bases,chngd bsd NMA nmodes
+CA  N2  H            1   120.000    418.400  ; new99
+H   N2  H            1   120.000    292.880  ; 
+CT  N2  H            1   118.400    418.400  ; new99 arg
+CA  N2  CT           1   123.200    418.400  ; AA arg
+CT  N3  H            1   109.500    418.400  ; AA lys,     changed based on NMA nmodes
+CT  N3  CT           1   109.500    418.400  ; AA pro/nt
+H   N3  H            1   109.500    292.880  ; AA lys, AA(end)
+C   NA  C            1   126.400    585.760  ; 
+C   NA  CA           1   125.200    585.760  ; 
+C   NA  H            1   116.800    418.400  ; new99
+CA  NA  H            1   118.000    418.400  ; new99
+CC  NA  CR           1   120.000    585.760  ; AA his
+CC  NA  H            1   120.000    418.400  ; new99 his
+CR  NA  CW           1   120.000    585.760  ; AA his
+CR  NA  H            1   120.000    418.400  ; new99 his
+CW  NA  H            1   120.000    418.400  ; new99 his
+CN  NA  CW           1   111.600    585.760  ; AA trp
+CN  NA  H            1   123.100    418.400  ; new99 trp
+CB  NB  CK           1   103.800    585.760  ; 
+CC  NB  CR           1   117.000    585.760  ; AA his
+CR  NB  CV           1   117.000    585.760  ; AA his
+C   NC  CA           1   120.500    585.760  ; 
+CA  NC  CB           1   112.200    585.760  ; 
+CA  NC  CQ           1   118.600    585.760  ; 
+CB  NC  CQ           1   111.000    585.760  ; 
+C   OH  HO           1   113.000    418.400  ; new99
+CT  OH  HO           1   108.500    460.240  ; 
+HO  OH  P            1   108.500    376.560  ; 
+CT  OS  CT           1   109.500    502.080  ; 
+CT  OS  P            1   120.500    836.800  ; 
+P   OS  P            1   120.500    836.800  ; 
+O2  P   OH           1   108.230    376.560  ; 
+O2  P   O2           1   119.900   1171.520  ; 
+O2  P   OS           1   108.230    836.800  ; 
+OH  P   OS           1   102.600    376.560  ; 
+OS  P   OS           1   102.600    376.560  ; 
+CT  S   CT           1    98.900    518.816  ; AA met
+CT  S   S            1   103.700    569.024  ; AA cyx             (SCHERAGA  JPC 79,1428)
+CT  SH  HS           1    96.000    359.824  ; changed from 44.0 based on methanethiol nmodes
+HS  SH  HS           1    92.070    292.880  ; AA cys
+F   CT  F            1   109.100    644.336  ; JCC,13,(1992),963;
+F   CT  H1           1   109.500    418.400  ; new99
+N   C   N            1   120.000    585.760  ; Added for Urea (same as N2-CA-N2) - EJS
+
+[ dihedraltypes ] 
+;i  j   k  l	 func      phase      kd      pn
+; LINE(467) CA  CA  CA  OH       4      180.00     4.60240     2 	 ; new99
+; LINE(468) H5  O   C   OH       4      180.00     4.60240     2 	 ; new99
+; LINE(469) H5  O   C   OS       4      180.00     4.60240     2 	 ; new99
+; LINE(470) CM  CT  CM  HA       4      180.00     4.60240     2 	 ; new99
+; LINE(471) CA  CA  CA  Br       4      180.00     4.60240     2 	 ; new99
+; LINE(472) CM  H4  C   O        4      180.00     4.60240     2 	 ; new99
+; LINE(473) C   CT  N   H        4      180.00     4.60240     2 	 ; new99
+; LINE(474) C   CT  N   O        4      180.00     4.60240     2     ; new99
+; LINE(475) CB  CK  N*  CT       4      180.00     4.18400     2	 ; 
+; LINE(476) CK  CB	N*  CT	     4      180.00     4.18400     2     ;
+; LINE(477) C   CM  N*  CT       4      180.00     4.18400     2	 ; dac guess, 9/94
+; LINE(478) CT  N*  C   CM       4      180.00     4.18400     2     ; 
+; LINE(479) CM  C   CM  CT       4      180.00     4.60240     2	 ; 
+; LINE(480) CT  O   C   OH       4      180.00    43.93200     2	 ; 
+; LINE(481) NA  CV  CC  CT       4      180.00     4.60240     2	 ; 
+; LINE(482) NB  CW  CC  CT       4      180.00     4.60240     2	 ; 
+; LINE(483) NA  CW  CC  CT       4      180.00     4.60240     2	 ; 
+; LINE(484) CW  CB  C*  CT       4      180.00     4.60240     2	 ; 
+; LINE(485) CA  CA  CA  CT       4      180.00     4.60240     2	 ; 
+; LINE(486) C   CM  CM  CT       4      180.00     4.60240     2	 ; dac guess, 9/94
+; LINE(487) NC  CM  CA  N2       4      180.00     4.60240     2	 ; dac guess, 9/94
+; LINE(488) CB  NC  CA  N2       4      180.00     4.60240     2	 ; dac, 10/94
+; LINE(489) NA  NC  CA  N2       4      180.00     4.60240     2	 ; dac, 10/94
+; LINE(490) CA  CA  C   OH       4      180.00     4.60240     2	 ; 
+; LINE(491) CT  CV  CC  NA       4      180.00     4.60240     2	 ; 
+; LINE(492) CT  CW  CC  NB       4      180.00     4.60240     2	 ; 
+; LINE(493) CT  CW  CC  NA       4      180.00     4.60240     2	 ; 
+; LINE(494) CB  CT  C*  CW       4      180.00     4.60240     2	 ; 
+; LINE(495) CM  N2  CA  NC       4      180.00     4.60240     2	 ; 
+; LINE(496) CB  N2  CA  NC       4      180.00     4.60240     2	 ; 
+; LINE(497) N2  NA  CA  NC       4      180.00     4.60240     2	 ; 
+; LINE(498) N   N   C   O        4      180.00    43.93200     2	 ; urea
+; LINE(499) X   O2  C   O2       4      180.00    43.93200     2	 ; JCC,7,(1986),230
+; LINE(500) X   N2  CA  N2       4      180.00    43.93200     2	 ; JCC,7,(1986),230
+; LINE(501) X   CT  N   CT       4      180.00     4.18400     2	 ; JCC,7,(1986),230
+; LINE(502) X   X   C   O        4      180.00    43.93200     2	 ; JCC,7,(1986),230
+; LINE(503) X   X   N   H        4      180.00     4.18400     2	 ; JCC,7,(1986),230
+; LINE(504) X   X   N2  H        4      180.00     4.18400     2	 ; JCC,7,(1986),230
+; LINE(505) X   X   NA  H        4      180.00     4.18400     2	 ; JCC,7,(1986),230
+; LINE(506) X   X   CA  HA       4      180.00     4.60240     2	 ; bsd.on C6H6 nmodes
+; LINE(507) X   X   CW  H4       4      180.00     4.60240     2	 ; 
+; LINE(508) X   X   CR  H5       4      180.00     4.60240     2	 ; 
+; LINE(509) X   X   CV  H4       4      180.00     4.60240     2	 ; 
+; LINE(510) X   X   CQ  H5       4      180.00     4.60240     2	 ; 
+; LINE(511) X   X   CK  H5       4      180.00     4.60240     2	 ; 
+; LINE(512) X   X   CM  H4       4      180.00     4.60240     2	 ; 
+; LINE(513) X   X   CM  HA       4      180.00     4.60240     2	 ; 
+; LINE(514) X   X   CA  H4       4      180.00     4.60240     2	 ; bsd.on C6H6 nmodes 
+; LINE(515) X   X   CA  H5       4      180.00     4.60240     2	 ; bsd.on C6H6 nmodes
+
+
+[ dihedraltypes ] 
+;i   j   k   l	   func	
+; LINE(520)  CT  CT  OS  CT    9       0.0      1.60247     3   ; 
+; LINE(521)  CT  CT  OS  CT    9     180.0      0.41840     2   ; 
+; LINE(522)  C   N   CT  C     9       0.0      1.12968     2   ; new for 99sb
+; LINE(523)  C   N   CT  C     9       0.0      1.75728     3   ; new for 99sb
+; LINE(524)  N   CT  C   N     9     180.0      1.88280     1   ; new for 99sb
+; LINE(525)  N   CT  C   N     9     180.0      6.61072     2   ; new for 99sb
+; LINE(526)  N   CT  C   N     9     180.0      2.30120     3   ; new for 99sb
+; LINE(527)  CT  CT  N   C     9       0.0      8.36800     1   ; new for 99sb
+; LINE(528)  CT  CT  N   C     9       0.0      8.36800     2   ; new for 99sb
+; LINE(529)  CT  CT  N   C     9       0.0      1.67360     3   ; new for 99sb
+; LINE(530)  CT  CT  C   N     9       0.0      0.83680     1   ; new for 99sb
+; LINE(531)  CT  CT  C   N     9       0.0      0.83680     2   ; new for 99sb
+; LINE(532)  CT  CT  C   N     9       0.0      1.67360     3   ; new for 99sb
+; LINE(533)  H   N   C   O     9     180.0     10.46000     2   ; JCC,7,(1986),230
+; LINE(534)  H   N   C   O     9       0.0      8.36800     1   ; J.C.cistrans-NMA DE
+; LINE(535)  CT  S   S   CT    9       0.0     14.64400     2   ; JCC,7,(1986),230
+; LINE(536)  CT  S   S   CT    9       0.0      2.51040     3   ; JCC,7,(1986),230
+; LINE(537)  OS  CT  CT  OS    9       0.0      0.60250     3   ; parm98, TC,PC,PAK
+; LINE(538)  OS  CT  CT  OS    9       0.0      4.91620     2   ; Piotr et al.
+; LINE(539)  OS  CT  CT  OH    9       0.0      0.60250     3   ; parm98, TC,PC,PAK
+; LINE(540)  OS  CT  CT  OH    9       0.0      4.91620     2   ; parm98, TC,PC,PAK
+; LINE(541)  OH  CT  CT  OH    9       0.0      0.60250     3   ; parm98, TC,PC,PAK
+; LINE(542)  OH  CT  CT  OH    9       0.0      4.91620     2   ; parm98, TC,PC,PAK
+; LINE(543)  OH  P   OS  CT    9       0.0      1.04600     3   ; JCC,7,(1986),230
+; LINE(544)  OH  P   OS  CT    9       0.0      5.02080     2   ; gg&gt ene.631g*/mp2
+; LINE(545)  OS  P   OS  CT    9       0.0      1.04600     3   ; JCC,7,(1986),230
+; LINE(546)  OS  P   OS  CT    9       0.0      5.02080     2   ; gg&gt ene.631g*/mp2
+; LINE(547)  OS  CT  N*  CK    9       0.0     10.46000     1   ; parm98, TC,PC,PAK
+; LINE(548)  OS  CT  N*  CM    9       0.0     10.46000     1   ; parm98, TC,PC,PAK
+; LINE(549)  H1  CT  C   O     9       0.0      3.34720     1   ; Junmei et al, 1999
+; LINE(550)  H1  CT  C   O     9     180.0      0.33472     3   ; Junmei et al, 1999
+; LINE(551)  HC  CT  C   O     9       0.0      3.34720     1   ; Junmei et al, 1999
+; LINE(552)  HC  CT  C   O     9     180.0      0.33472     3   ; Junmei et al, 1999
+; LINE(553)  HC  CT  CT  HC    9       0.0      0.62760     3   ; Junmei et al, 1999
+; LINE(554)  HC  CT  CT  CT    9       0.0      0.66944     3   ; Junmei et al, 1999
+; LINE(555)  HC  CT  CM  CM    9     180.0      1.58992     3   ; Junmei et al, 1999
+; LINE(556)  HC  CT  CM  CM    9       0.0      4.81160     1   ; Junmei et al, 1999
+; LINE(557)  HO  OH  CT  CT    9       0.0      0.66944     3   ; Junmei et al, 1999
+; LINE(558)  HO  OH  CT  CT    9       0.0      1.04600     1   ; Junmei et al, 1999
+; LINE(559)  HO  OH  C   O     9     180.0      9.62320     2   ; Junmei et al, 1999
+; LINE(560)  HO  OH  C   O     9       0.0      7.94960     1   ; Junmei et al, 1999
+; LINE(561)  CM  CM  C   O     9     180.0      9.10020     2   ; Junmei et al, 1999
+; LINE(562)  CM  CM  C   O     9       0.0      1.25520     3   ; Junmei et al, 1999
+; LINE(563)  CT  CM  CM  CT    9     180.0     27.82360     2   ; Junmei et al, 1999
+; LINE(564)  CT  CM  CM  CT    9     180.0      7.94960     1   ; Junmei et al, 1999
+; LINE(565)  CT  CT  CT  CT    9       0.0      0.75312     3   ; Junmei et al, 1999
+; LINE(566)  CT  CT  CT  CT    9     180.0      1.04600     2   ; Junmei et al, 1999
+; LINE(567)  CT  CT  CT  CT    9     180.0      0.83680     1   ; Junmei et al, 1999
+; LINE(568)  CT  CT  OS  C     9       0.0      1.60247     3   ; Junmei et al, 1999
+; LINE(569)  CT  CT  OS  C     9     180.0      3.34720     1   ; Junmei et al, 1999
+; LINE(570)  CT  OS  CT  OS    9       0.0      0.41840     3   ; Junmei et al, 1999
+; LINE(571)  CT  OS  CT  OS    9     180.0      3.55640     2   ; Junmei et al, 1999
+; LINE(572)  CT  OS  CT  OS    9     180.0      5.64840     1   ; Junmei et al, 1999
+; LINE(573)  O   C   OS  CT    9     180.0     11.29680     2   ; Junmei et al, 1999
+; LINE(574)  O   C   OS  CT    9     180.0      5.85760     1   ; Junmei et al, 1999
+; LINE(575)  F   CT  CT  F     9     180.0      5.02080     1   ; Junmei et al, 1999
+; LINE(576)  Cl  CT  CT  Cl    9     180.0      1.88280     1   ; Junmei et al, 1999
+; LINE(577)  Br  CT  CT  Br    9       0.0      0.00000     0   ; Junmei et al, 1999
+; LINE(578)  H1  CT  CT  OS    9       0.0      1.04600     1   ; Junmei et al, 1999
+; LINE(579)  H1  CT  CT  OH    9       0.0      1.04600     1   ; Junmei et al, 1999
+; LINE(580)  H1  CT  CT  F     9       0.0      0.79496     1   ; Junmei et al, 1999
+; LINE(581)  H1  CT  CT  Cl    9       0.0      1.04600     1   ; Junmei et al, 1999
+; LINE(582)  H1  CT  CT  Br    9       0.0      2.30120     1   ; Junmei et al, 1999
+; LINE(583)  HC  CT  CT  OS    9       0.0      1.04600     1   ; Junmei et al, 1999
+; LINE(584)  HC  CT  CT  OH    9       0.0      1.04600     1   ; Junmei et al, 1999
+; LINE(585)  HC  CT  CT  F     9       0.0      0.79496     1   ; Junmei et al, 1999
+; LINE(586)  HC  CT  CT  Cl    9       0.0      1.04600     1   ; Junmei et al, 1999
+; LINE(587)  HC  CT  CT  Br    9       0.0      2.30120     1   ; Junmei et al, 1999
+; LINE(588)  CT  OS  CT  N*    9       0.0      1.60247     3   ; parm98.dat, TC,PC,PAK
+; LINE(589)  CT  OS  CT  N*    9       0.0      2.71960     2   ; Piotr et al.
+; LINE(590)  X   C   C   X     9     180.0     15.16700     2   ; Junmei et al, 1999
+; LINE(591)  X   C   O   X     9     180.0     11.71520     2   ; Junmei et al, 1999
+; LINE(592)  X   C   OS  X     9     180.0     11.29680     2   ; Junmei et al, 1999
+; LINE(593)  X   CA  OH  X     9     180.0      3.76560     2   ; Junmei et al, 99
+; LINE(594)  X   CM  OS  X     9     180.0      4.39320     2   ; Junmei et al, 1999
+; LINE(595)  X   C   CA  X     9     180.0     15.16700     2   ; intrpol.bsd.on C6H6
+; LINE(596)  X   C   CB  X     9     180.0     12.55200     2   ; intrpol.bsd.on C6H6
+; LINE(597)  X   C   CM  X     9     180.0      9.10020     2   ; intrpol.bsd.on C6H6
+; LINE(598)  X   C   N*  X     9     180.0      6.06680     2   ; JCC,7,(1986),230
+; LINE(599)  X   C   NA  X     9     180.0      5.64840     2   ; JCC,7,(1986),230
+; LINE(600)  X   C   NC  X     9     180.0     16.73600     2   ; JCC,7,(1986),230
+; LINE(601)  X   C   OH  X     9     180.0      9.62320     2   ; Junmei et al, 1999
+; LINE(602)  X   C   CT  X     9       0.0      0.00000     0   ; JCC,7,(1986),230
+; LINE(603)  X   CA  CA  X     9     180.0     15.16700     2   ; intrpol.bsd.on C6H6
+; LINE(604)  X   CA  CB  X     9     180.0     14.64400     2   ; intrpol.bsd.on C6H6
+; LINE(605)  X   CA  CM  X     9     180.0     10.66920     2   ; intrpol.bsd.on C6H6
+; LINE(606)  X   CA  CT  X     9       0.0      0.00000     0   ; JCC,7,(1986),230
+; LINE(607)  X   CA  N2  X     9     180.0     10.04160     2   ; reinterpolated 93'
+; LINE(608)  X   CA  NA  X     9     180.0      6.27600     2   ; JCC,7,(1986),230
+; LINE(609)  X   CA  NC  X     9     180.0     20.08320     2   ; JCC,7,(1986),230
+; LINE(610)  X   CB  CB  X     9     180.0     22.80280     2   ; intrpol.bsd.on C6H6
+; LINE(611)  X   CB  N*  X     9     180.0      6.90360     2   ; JCC,7,(1986),230
+; LINE(612)  X   CB  NB  X     9     180.0     10.66920     2   ; JCC,7,(1986),230
+; LINE(613)  X   CB  NC  X     9     180.0     17.36360     2   ; JCC,7,(1986),230
+; LINE(614)  X   CK  N*  X     9     180.0      7.11280     2   ; JCC,7,(1986),230
+; LINE(615)  X   CK  NB  X     9     180.0     41.84000     2   ; JCC,7,(1986),230
+; LINE(616)  X   CM  CM  X     9     180.0     27.82360     2   ; intrpol.bsd.on C6H6
+; LINE(617)  X   CM  CT  X     9       0.0      0.00000     0   ; JCC,7,(1986),230
+; LINE(618)  X   CM  N*  X     9     180.0      7.74040     2   ; JCC,7,(1986),230
+; LINE(619)  X   CQ  NC  X     9     180.0     28.45120     2   ; JCC,7,(1986),230
+; LINE(620)  X   CT  CT  X     9       0.0      0.65084     3   ; JCC,7,(1986),230
+; LINE(621)  X   CT  N   X     9       0.0      0.00000     0   ; JCC,7,(1986),230
+; LINE(622)  X   CT  N*  X     9       0.0      0.00000     0   ; JCC,7,(1986),230
+; LINE(623)  X   CT  N2  X     9       0.0      0.00000     0   ; JCC,7,(1986),230
+; LINE(624)  X   CT  OH  X     9       0.0      0.69733     3   ; JCC,7,(1986),230
+; LINE(625)  X   CT  OS  X     9       0.0      1.60387     3   ; JCC,7,(1986),230
+; LINE(626)  X   OH  P   X     9       0.0      1.04600     3   ; JCC,7,(1986),230
+; LINE(627)  X   OS  P   X     9       0.0      1.04600     3   ; JCC,7,(1986),230
+; LINE(628)  X   C   N   X     9     180.0     10.46000     2   ; AA,NMA
+; LINE(629)  X   CT  N3  X     9       0.0      0.65084     3   ; JCC,7,(1986),230
+; LINE(630)  X   CT  S   X     9       0.0      1.39467     3   ; JCC,7,(1986),230
+; LINE(631)  X   CT  SH  X     9       0.0      1.04600     3   ; JCC,7,(1986),230
+; LINE(632)  X   C*  CB  X     9     180.0      7.00820     2   ; intrpol.bsd.onC6H6aa
+; LINE(633)  X   C*  CT  X     9       0.0      0.00000     0   ; JCC,7,(1986),230
+; LINE(634)  X   C*  CW  X     9     180.0     27.30060     2   ; intrpol.bsd.on C6H6
+; LINE(635)  X   CA  CN  X     9     180.0     15.16700     2   ; reinterpolated 93'
+; LINE(636)  X   CB  CN  X     9     180.0     12.55200     2   ; reinterpolated 93'
+; LINE(637)  X   CC  CT  X     9       0.0      0.00000     0   ; JCC,7,(1986),230
+; LINE(638)  X   CC  CV  X     9     180.0     21.54760     2   ; intrpol.bsd.on C6H6
+; LINE(639)  X   CC  CW  X     9     180.0     22.48900     2   ; intrpol.bsd.on C6H6
+; LINE(640)  X   CC  NA  X     9     180.0      5.85760     2   ; JCC,7,(1986),230
+; LINE(641)  X   CC  NB  X     9     180.0     10.04160     2   ; JCC,7,(1986),230
+; LINE(642)  X   CN  NA  X     9     180.0      6.38060     2   ; reinterpolated 93'
+; LINE(643)  X   CR  NA  X     9     180.0      9.72780     2   ; JCC,7,(1986),230
+; LINE(644)  X   CR  NB  X     9     180.0     20.92000     2   ; JCC,7,(1986),230
+; LINE(645)  X   CV  NB  X     9     180.0     10.04160     2   ; JCC,7,(1986),230
+; LINE(646)  X   CW  NA  X     9     180.0      6.27600     2   ; JCC,7,(1986),230
+
+; Modified amino acid torsions in Amber99SB-ILDN
+; These should not override the general torsion for the atom types,
+; so to avoid introducing extra new atom types we list them explicitly for
+; the residues in question:
+
+
+
+
+
+
+
+
+
+
+
+
+[ moleculetype ] 
+; Name            nrexcl
+Protein             3 
+
+[ atoms ] 
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+; residue   1 GLY rtp NGLY q +1.0
+1 N3_ 1 GLY N 1 0.2943 14.01 
+2 H_ 1 GLY H1 2 0.1642 1.008 
+3 H_ 1 GLY H2 3 0.1642 1.008 
+4 H_ 1 GLY H3 4 0.1642 1.008 
+5 CT_ 1 GLY CA 5 -0.01 12.01 
+6 HP_ 1 GLY HA1 6 0.0895 1.008 
+7 HP_ 1 GLY HA2 7 0.0895 1.008 
+8 C_ 1 GLY C 8 0.6163 12.01 
+9 O_ 1 GLY O 9 -0.5722 16 ; qtot 1
+; residue   2 GLY rtp GLY  q  0.0
+10 N_ 2 GLY N 10 -0.4157 14.01 
+11 H_ 2 GLY H 11 0.2719 1.008 
+12 CT_ 2 GLY CA 12 -0.0252 12.01 
+13 H1_ 2 GLY HA1 13 0.0698 1.008 
+14 H1_ 2 GLY HA2 14 0.0698 1.008 
+15 C_ 2 GLY C 15 0.5973 12.01 
+16 O_ 2 GLY O 16 -0.5679 16 ; qtot 1
+; residue   3 GLY rtp GLY  q  0.0
+17 N_ 3 GLY N 17 -0.4157 14.01 
+18 H_ 3 GLY H 18 0.2719 1.008 
+19 CT_ 3 GLY CA 19 -0.0252 12.01 
+20 H1_ 3 GLY HA1 20 0.0698 1.008 
+21 H1_ 3 GLY HA2 21 0.0698 1.008 
+22 C_ 3 GLY C 22 0.5973 12.01 
+23 O_ 3 GLY O 23 -0.5679 16 ; qtot 1
+; residue   4 GLY rtp GLY  q  0.0
+24 N_ 4 GLY N 24 -0.4157 14.01 
+25 H_ 4 GLY H 25 0.2719 1.008 
+26 CT_ 4 GLY CA 26 -0.0252 12.01 
+27 H1_ 4 GLY HA1 27 0.0698 1.008 
+28 H1_ 4 GLY HA2 28 0.0698 1.008 
+29 C_ 4 GLY C 29 0.5973 12.01 
+30 O_ 4 GLY O 30 -0.5679 16 ; qtot 1
+; residue   5 GLY rtp GLY  q  0.0
+31 N_ 5 GLY N 31 -0.4157 14.01 
+32 H_ 5 GLY H 32 0.2719 1.008 
+33 CT_ 5 GLY CA 33 -0.0252 12.01 
+34 H1_ 5 GLY HA1 34 0.0698 1.008 
+35 H1_ 5 GLY HA2 35 0.0698 1.008 
+36 C_ 5 GLY C 36 0.5973 12.01 
+37 O_ 5 GLY O 37 -0.5679 16 ; qtot 1
+; residue   6 GLY rtp GLY  q  0.0
+38 N_ 6 GLY N 38 -0.4157 14.01 
+39 H_ 6 GLY H 39 0.2719 1.008 
+40 CT_ 6 GLY CA 40 -0.0252 12.01 
+41 H1_ 6 GLY HA1 41 0.0698 1.008 
+42 H1_ 6 GLY HA2 42 0.0698 1.008 
+43 C_ 6 GLY C 43 0.5973 12.01 
+44 O_ 6 GLY O 44 -0.5679 16 ; qtot 1
+; residue   7 GLY rtp GLY  q  0.0
+45 N_ 7 GLY N 45 -0.4157 14.01 
+46 H_ 7 GLY H 46 0.2719 1.008 
+47 CT_ 7 GLY CA 47 -0.0252 12.01 
+48 H1_ 7 GLY HA1 48 0.0698 1.008 
+49 H1_ 7 GLY HA2 49 0.0698 1.008 
+50 C_ 7 GLY C 50 0.5973 12.01 
+51 O_ 7 GLY O 51 -0.5679 16 ; qtot 1
+; residue   8 GLY rtp GLY  q  0.0
+52 N_ 8 GLY N 52 -0.4157 14.01 
+53 H_ 8 GLY H 53 0.2719 1.008 
+54 CT_ 8 GLY CA 54 -0.0252 12.01 
+55 H1_ 8 GLY HA1 55 0.0698 1.008 
+56 H1_ 8 GLY HA2 56 0.0698 1.008 
+57 C_ 8 GLY C 57 0.5973 12.01 
+58 O_ 8 GLY O 58 -0.5679 16 ; qtot 1
+; residue   9 GLY rtp GLY  q  0.0
+59 N_ 9 GLY N 59 -0.4157 14.01 
+60 H_ 9 GLY H 60 0.2719 1.008 
+61 CT_ 9 GLY CA 61 -0.0252 12.01 
+62 H1_ 9 GLY HA1 62 0.0698 1.008 
+63 H1_ 9 GLY HA2 63 0.0698 1.008 
+64 C_ 9 GLY C 64 0.5973 12.01 
+65 O_ 9 GLY O 65 -0.5679 16 ; qtot 1
+; residue  10 GLY rtp GLY  q  0.0
+66 N_ 10 GLY N 66 -0.4157 14.01 
+67 H_ 10 GLY H 67 0.2719 1.008 
+68 CT_ 10 GLY CA 68 -0.0252 12.01 
+69 H1_ 10 GLY HA1 69 0.0698 1.008 
+70 H1_ 10 GLY HA2 70 0.0698 1.008 
+71 C_ 10 GLY C 71 0.5973 12.01 
+72 O_ 10 GLY O 72 -0.5679 16 ; qtot 1
+; residue  11 GLY rtp GLY  q  0.0
+73 N_ 11 GLY N 73 -0.4157 14.01 
+74 H_ 11 GLY H 74 0.2719 1.008 
+75 CT_ 11 GLY CA 75 -0.0252 12.01 
+76 H1_ 11 GLY HA1 76 0.0698 1.008 
+77 H1_ 11 GLY HA2 77 0.0698 1.008 
+78 C_ 11 GLY C 78 0.5973 12.01 
+79 O_ 11 GLY O 79 -0.5679 16 ; qtot 1
+; residue  12 GLY rtp CGLY q -1.0
+80 N_ 12 GLY N 80 -0.3821 14.01 
+81 H_ 12 GLY H 81 0.2681 1.008 
+82 CT_ 12 GLY CA 82 -0.2493 12.01 
+83 H1_ 12 GLY HA1 83 0.1056 1.008 
+84 H1_ 12 GLY HA2 84 0.1056 1.008 
+85 C_ 12 GLY C 85 0.7231 12.01 
+86 O2_ 12 GLY OC1 86 -0.7855 16 
+87 O2_ 12 GLY OC2 87 -0.7855 16 ; qtot 0
+
+[ bonds ] 
+;  ai    aj funct            c0            c1            c2            c3
+    1     2     1  
+    1     3     1  
+    1     4     1  
+    1     5     1  
+    5     6     1  
+    5     7     1  
+    5     8     1  
+    8     9     1  
+    8    10     1  
+   10    11     1  
+   10    12     1  
+   12    13     1  
+   12    14     1  
+   12    15     1  
+   15    16     1  
+   15    17     1  
+   17    18     1  
+   17    19     1  
+   19    20     1  
+   19    21     1  
+   19    22     1  
+   22    23     1  
+   22    24     1  
+   24    25     1  
+   24    26     1  
+   26    27     1  
+   26    28     1  
+   26    29     1  
+   29    30     1  
+   29    31     1  
+   31    32     1  
+   31    33     1  
+   33    34     1  
+   33    35     1  
+   33    36     1  
+   36    37     1  
+   36    38     1  
+   38    39     1  
+   38    40     1  
+   40    41     1  
+   40    42     1  
+   40    43     1  
+   43    44     1  
+   43    45     1  
+   45    46     1  
+   45    47     1  
+   47    48     1  
+   47    49     1  
+   47    50     1  
+   50    51     1  
+   50    52     1  
+   52    53     1  
+   52    54     1  
+   54    55     1  
+   54    56     1  
+   54    57     1  
+   57    58     1  
+   57    59     1  
+   59    60     1  
+   59    61     1  
+   61    62     1  
+   61    63     1  
+   61    64     1  
+   64    65     1  
+   64    66     1  
+   66    67     1  
+   66    68     1  
+   68    69     1  
+   68    70     1  
+   68    71     1  
+   71    72     1  
+   71    73     1  
+   73    74     1  
+   73    75     1  
+   75    76     1  
+   75    77     1  
+   75    78     1  
+   78    79     1  
+   78    80     1  
+   80    81     1  
+   80    82     1  
+   82    83     1  
+   82    84     1  
+   82    85     1  
+   85    86     1  
+   85    87     1  
+
+[ pairs ] 
+;  ai    aj funct            c0            c1            c2            c3
+    1     9     1  
+    1    10     1  
+    2     6     1  
+    2     7     1  
+    2     8     1  
+    3     6     1  
+    3     7     1  
+    3     8     1  
+    4     6     1  
+    4     7     1  
+    4     8     1  
+    5    11     1  
+    5    12     1  
+    6     9     1  
+    6    10     1  
+    7     9     1  
+    7    10     1  
+    8    13     1  
+    8    14     1  
+    8    15     1  
+    9    11     1  
+    9    12     1  
+   10    16     1  
+   10    17     1  
+   11    13     1  
+   11    14     1  
+   11    15     1  
+   12    18     1  
+   12    19     1  
+   13    16     1  
+   13    17     1  
+   14    16     1  
+   14    17     1  
+   15    20     1  
+   15    21     1  
+   15    22     1  
+   16    18     1  
+   16    19     1  
+   17    23     1  
+   17    24     1  
+   18    20     1  
+   18    21     1  
+   18    22     1  
+   19    25     1  
+   19    26     1  
+   20    23     1  
+   20    24     1  
+   21    23     1  
+   21    24     1  
+   22    27     1  
+   22    28     1  
+   22    29     1  
+   23    25     1  
+   23    26     1  
+   24    30     1  
+   24    31     1  
+   25    27     1  
+   25    28     1  
+   25    29     1  
+   26    32     1  
+   26    33     1  
+   27    30     1  
+   27    31     1  
+   28    30     1  
+   28    31     1  
+   29    34     1  
+   29    35     1  
+   29    36     1  
+   30    32     1  
+   30    33     1  
+   31    37     1  
+   31    38     1  
+   32    34     1  
+   32    35     1  
+   32    36     1  
+   33    39     1  
+   33    40     1  
+   34    37     1  
+   34    38     1  
+   35    37     1  
+   35    38     1  
+   36    41     1  
+   36    42     1  
+   36    43     1  
+   37    39     1  
+   37    40     1  
+   38    44     1  
+   38    45     1  
+   39    41     1  
+   39    42     1  
+   39    43     1  
+   40    46     1  
+   40    47     1  
+   41    44     1  
+   41    45     1  
+   42    44     1  
+   42    45     1  
+   43    48     1  
+   43    49     1  
+   43    50     1  
+   44    46     1  
+   44    47     1  
+   45    51     1  
+   45    52     1  
+   46    48     1  
+   46    49     1  
+   46    50     1  
+   47    53     1  
+   47    54     1  
+   48    51     1  
+   48    52     1  
+   49    51     1  
+   49    52     1  
+   50    55     1  
+   50    56     1  
+   50    57     1  
+   51    53     1  
+   51    54     1  
+   52    58     1  
+   52    59     1  
+   53    55     1  
+   53    56     1  
+   53    57     1  
+   54    60     1  
+   54    61     1  
+   55    58     1  
+   55    59     1  
+   56    58     1  
+   56    59     1  
+   57    62     1  
+   57    63     1  
+   57    64     1  
+   58    60     1  
+   58    61     1  
+   59    65     1  
+   59    66     1  
+   60    62     1  
+   60    63     1  
+   60    64     1  
+   61    67     1  
+   61    68     1  
+   62    65     1  
+   62    66     1  
+   63    65     1  
+   63    66     1  
+   64    69     1  
+   64    70     1  
+   64    71     1  
+   65    67     1  
+   65    68     1  
+   66    72     1  
+   66    73     1  
+   67    69     1  
+   67    70     1  
+   67    71     1  
+   68    74     1  
+   68    75     1  
+   69    72     1  
+   69    73     1  
+   70    72     1  
+   70    73     1  
+   71    76     1  
+   71    77     1  
+   71    78     1  
+   72    74     1  
+   72    75     1  
+   73    79     1  
+   73    80     1  
+   74    76     1  
+   74    77     1  
+   74    78     1  
+   75    81     1  
+   75    82     1  
+   76    79     1  
+   76    80     1  
+   77    79     1  
+   77    80     1  
+   78    83     1  
+   78    84     1  
+   78    85     1  
+   79    81     1  
+   79    82     1  
+   80    86     1  
+   80    87     1  
+   81    83     1  
+   81    84     1  
+   81    85     1  
+   83    86     1  
+   83    87     1  
+   84    86     1  
+   84    87     1  
+
+[ angles ] 
+;  ai    aj    ak funct            c0            c1            c2            c3
+    2     1     3     1  
+    2     1     4     1  
+    2     1     5     1  
+    3     1     4     1  
+    3     1     5     1  
+    4     1     5     1  
+    1     5     6     1  
+    1     5     7     1  
+    1     5     8     1  
+    6     5     7     1  
+    6     5     8     1  
+    7     5     8     1  
+    5     8     9     1  
+    5     8    10     1  
+    9     8    10     1  
+    8    10    11     1  
+    8    10    12     1  
+   11    10    12     1  
+   10    12    13     1  
+   10    12    14     1  
+   10    12    15     1  
+   13    12    14     1  
+   13    12    15     1  
+   14    12    15     1  
+   12    15    16     1  
+   12    15    17     1  
+   16    15    17     1  
+   15    17    18     1  
+   15    17    19     1  
+   18    17    19     1  
+   17    19    20     1  
+   17    19    21     1  
+   17    19    22     1  
+   20    19    21     1  
+   20    19    22     1  
+   21    19    22     1  
+   19    22    23     1  
+   19    22    24     1  
+   23    22    24     1  
+   22    24    25     1  
+   22    24    26     1  
+   25    24    26     1  
+   24    26    27     1  
+   24    26    28     1  
+   24    26    29     1  
+   27    26    28     1  
+   27    26    29     1  
+   28    26    29     1  
+   26    29    30     1  
+   26    29    31     1  
+   30    29    31     1  
+   29    31    32     1  
+   29    31    33     1  
+   32    31    33     1  
+   31    33    34     1  
+   31    33    35     1  
+   31    33    36     1  
+   34    33    35     1  
+   34    33    36     1  
+   35    33    36     1  
+   33    36    37     1  
+   33    36    38     1  
+   37    36    38     1  
+   36    38    39     1  
+   36    38    40     1  
+   39    38    40     1  
+   38    40    41     1  
+   38    40    42     1  
+   38    40    43     1  
+   41    40    42     1  
+   41    40    43     1  
+   42    40    43     1  
+   40    43    44     1  
+   40    43    45     1  
+   44    43    45     1  
+   43    45    46     1  
+   43    45    47     1  
+   46    45    47     1  
+   45    47    48     1  
+   45    47    49     1  
+   45    47    50     1  
+   48    47    49     1  
+   48    47    50     1  
+   49    47    50     1  
+   47    50    51     1  
+   47    50    52     1  
+   51    50    52     1  
+   50    52    53     1  
+   50    52    54     1  
+   53    52    54     1  
+   52    54    55     1  
+   52    54    56     1  
+   52    54    57     1  
+   55    54    56     1  
+   55    54    57     1  
+   56    54    57     1  
+   54    57    58     1  
+   54    57    59     1  
+   58    57    59     1  
+   57    59    60     1  
+   57    59    61     1  
+   60    59    61     1  
+   59    61    62     1  
+   59    61    63     1  
+   59    61    64     1  
+   62    61    63     1  
+   62    61    64     1  
+   63    61    64     1  
+   61    64    65     1  
+   61    64    66     1  
+   65    64    66     1  
+   64    66    67     1  
+   64    66    68     1  
+   67    66    68     1  
+   66    68    69     1  
+   66    68    70     1  
+   66    68    71     1  
+   69    68    70     1  
+   69    68    71     1  
+   70    68    71     1  
+   68    71    72     1  
+   68    71    73     1  
+   72    71    73     1  
+   71    73    74     1  
+   71    73    75     1  
+   74    73    75     1  
+   73    75    76     1  
+   73    75    77     1  
+   73    75    78     1  
+   76    75    77     1  
+   76    75    78     1  
+   77    75    78     1  
+   75    78    79     1  
+   75    78    80     1  
+   79    78    80     1  
+   78    80    81     1  
+   78    80    82     1  
+   81    80    82     1  
+   80    82    83     1  
+   80    82    84     1  
+   80    82    85     1  
+   83    82    84     1  
+   83    82    85     1  
+   84    82    85     1  
+   82    85    86     1  
+   82    85    87     1  
+   86    85    87     1  
+
+[ dihedrals ] 
+;  ai    aj    ak    al funct            c0            c1            c2            c3            c4            c5
+; parameters for types H N3 CT HP at LINE(629)
+2 1 5 6 9 0.0 0.65084 3
+; parameters for types H N3 CT HP at LINE(629)
+2 1 5 7 9 0.0 0.65084 3
+; parameters for types H N3 CT C at LINE(629)
+2 1 5 8 9 0.0 0.65084 3
+; parameters for types H N3 CT HP at LINE(629)
+3 1 5 6 9 0.0 0.65084 3
+; parameters for types H N3 CT HP at LINE(629)
+3 1 5 7 9 0.0 0.65084 3
+; parameters for types H N3 CT C at LINE(629)
+3 1 5 8 9 0.0 0.65084 3
+; parameters for types H N3 CT HP at LINE(629)
+4 1 5 6 9 0.0 0.65084 3
+; parameters for types H N3 CT HP at LINE(629)
+4 1 5 7 9 0.0 0.65084 3
+; parameters for types H N3 CT C at LINE(629)
+4 1 5 8 9 0.0 0.65084 3
+; parameters for types N3 CT C O at LINE(602)
+1 5 8 9 9 0.0 0 0
+; parameters for types N3 CT C N at LINE(602)
+1 5 8 10 9 0.0 0 0
+; parameters for types HP CT C O at LINE(602)
+6 5 8 9 9 0.0 0 0
+; parameters for types HP CT C N at LINE(602)
+6 5 8 10 9 0.0 0 0
+; parameters for types HP CT C O at LINE(602)
+7 5 8 9 9 0.0 0 0
+; parameters for types HP CT C N at LINE(602)
+7 5 8 10 9 0.0 0 0
+; parameters for types CT C N H at LINE(628)
+5 8 10 11 9 180.0 10.46 2
+; parameters for types CT C N CT at LINE(628)
+5 8 10 12 9 180.0 10.46 2
+; parameters for types O C N H at LINE(533)
+9 8 10 11 9 180.0 10.46 2
+9 8 10 11 9 0.0 8.368 1
+; parameters for types O C N CT at LINE(628)
+9 8 10 12 9 180.0 10.46 2
+; parameters for types C N CT H1 at LINE(621)
+8 10 12 13 9 0.0 0 0
+; parameters for types C N CT H1 at LINE(621)
+8 10 12 14 9 0.0 0 0
+; parameters for types C N CT C at LINE(522)
+8 10 12 15 9 0.0 1.12968 2
+8 10 12 15 9 0.0 1.75728 3
+; parameters for types H N CT H1 at LINE(621)
+11 10 12 13 9 0.0 0 0
+; parameters for types H N CT H1 at LINE(621)
+11 10 12 14 9 0.0 0 0
+; parameters for types H N CT C at LINE(621)
+11 10 12 15 9 0.0 0 0
+; parameters for types N CT C O at LINE(602)
+10 12 15 16 9 0.0 0 0
+; parameters for types N CT C N at LINE(524)
+10 12 15 17 9 180.0 1.8828 1
+10 12 15 17 9 180.0 6.61072 2
+10 12 15 17 9 180.0 2.3012 3
+; parameters for types H1 CT C O at LINE(549)
+13 12 15 16 9 0.0 3.3472 1
+13 12 15 16 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+13 12 15 17 9 0.0 0 0
+; parameters for types H1 CT C O at LINE(549)
+14 12 15 16 9 0.0 3.3472 1
+14 12 15 16 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+14 12 15 17 9 0.0 0 0
+; parameters for types CT C N H at LINE(628)
+12 15 17 18 9 180.0 10.46 2
+; parameters for types CT C N CT at LINE(628)
+12 15 17 19 9 180.0 10.46 2
+; parameters for types O C N H at LINE(533)
+16 15 17 18 9 180.0 10.46 2
+16 15 17 18 9 0.0 8.368 1
+; parameters for types O C N CT at LINE(628)
+16 15 17 19 9 180.0 10.46 2
+; parameters for types C N CT H1 at LINE(621)
+15 17 19 20 9 0.0 0 0
+; parameters for types C N CT H1 at LINE(621)
+15 17 19 21 9 0.0 0 0
+; parameters for types C N CT C at LINE(522)
+15 17 19 22 9 0.0 1.12968 2
+15 17 19 22 9 0.0 1.75728 3
+; parameters for types H N CT H1 at LINE(621)
+18 17 19 20 9 0.0 0 0
+; parameters for types H N CT H1 at LINE(621)
+18 17 19 21 9 0.0 0 0
+; parameters for types H N CT C at LINE(621)
+18 17 19 22 9 0.0 0 0
+; parameters for types N CT C O at LINE(602)
+17 19 22 23 9 0.0 0 0
+; parameters for types N CT C N at LINE(524)
+17 19 22 24 9 180.0 1.8828 1
+17 19 22 24 9 180.0 6.61072 2
+17 19 22 24 9 180.0 2.3012 3
+; parameters for types H1 CT C O at LINE(549)
+20 19 22 23 9 0.0 3.3472 1
+20 19 22 23 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+20 19 22 24 9 0.0 0 0
+; parameters for types H1 CT C O at LINE(549)
+21 19 22 23 9 0.0 3.3472 1
+21 19 22 23 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+21 19 22 24 9 0.0 0 0
+; parameters for types CT C N H at LINE(628)
+19 22 24 25 9 180.0 10.46 2
+; parameters for types CT C N CT at LINE(628)
+19 22 24 26 9 180.0 10.46 2
+; parameters for types O C N H at LINE(533)
+23 22 24 25 9 180.0 10.46 2
+23 22 24 25 9 0.0 8.368 1
+; parameters for types O C N CT at LINE(628)
+23 22 24 26 9 180.0 10.46 2
+; parameters for types C N CT H1 at LINE(621)
+22 24 26 27 9 0.0 0 0
+; parameters for types C N CT H1 at LINE(621)
+22 24 26 28 9 0.0 0 0
+; parameters for types C N CT C at LINE(522)
+22 24 26 29 9 0.0 1.12968 2
+22 24 26 29 9 0.0 1.75728 3
+; parameters for types H N CT H1 at LINE(621)
+25 24 26 27 9 0.0 0 0
+; parameters for types H N CT H1 at LINE(621)
+25 24 26 28 9 0.0 0 0
+; parameters for types H N CT C at LINE(621)
+25 24 26 29 9 0.0 0 0
+; parameters for types N CT C O at LINE(602)
+24 26 29 30 9 0.0 0 0
+; parameters for types N CT C N at LINE(524)
+24 26 29 31 9 180.0 1.8828 1
+24 26 29 31 9 180.0 6.61072 2
+24 26 29 31 9 180.0 2.3012 3
+; parameters for types H1 CT C O at LINE(549)
+27 26 29 30 9 0.0 3.3472 1
+27 26 29 30 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+27 26 29 31 9 0.0 0 0
+; parameters for types H1 CT C O at LINE(549)
+28 26 29 30 9 0.0 3.3472 1
+28 26 29 30 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+28 26 29 31 9 0.0 0 0
+; parameters for types CT C N H at LINE(628)
+26 29 31 32 9 180.0 10.46 2
+; parameters for types CT C N CT at LINE(628)
+26 29 31 33 9 180.0 10.46 2
+; parameters for types O C N H at LINE(533)
+30 29 31 32 9 180.0 10.46 2
+30 29 31 32 9 0.0 8.368 1
+; parameters for types O C N CT at LINE(628)
+30 29 31 33 9 180.0 10.46 2
+; parameters for types C N CT H1 at LINE(621)
+29 31 33 34 9 0.0 0 0
+; parameters for types C N CT H1 at LINE(621)
+29 31 33 35 9 0.0 0 0
+; parameters for types C N CT C at LINE(522)
+29 31 33 36 9 0.0 1.12968 2
+29 31 33 36 9 0.0 1.75728 3
+; parameters for types H N CT H1 at LINE(621)
+32 31 33 34 9 0.0 0 0
+; parameters for types H N CT H1 at LINE(621)
+32 31 33 35 9 0.0 0 0
+; parameters for types H N CT C at LINE(621)
+32 31 33 36 9 0.0 0 0
+; parameters for types N CT C O at LINE(602)
+31 33 36 37 9 0.0 0 0
+; parameters for types N CT C N at LINE(524)
+31 33 36 38 9 180.0 1.8828 1
+31 33 36 38 9 180.0 6.61072 2
+31 33 36 38 9 180.0 2.3012 3
+; parameters for types H1 CT C O at LINE(549)
+34 33 36 37 9 0.0 3.3472 1
+34 33 36 37 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+34 33 36 38 9 0.0 0 0
+; parameters for types H1 CT C O at LINE(549)
+35 33 36 37 9 0.0 3.3472 1
+35 33 36 37 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+35 33 36 38 9 0.0 0 0
+; parameters for types CT C N H at LINE(628)
+33 36 38 39 9 180.0 10.46 2
+; parameters for types CT C N CT at LINE(628)
+33 36 38 40 9 180.0 10.46 2
+; parameters for types O C N H at LINE(533)
+37 36 38 39 9 180.0 10.46 2
+37 36 38 39 9 0.0 8.368 1
+; parameters for types O C N CT at LINE(628)
+37 36 38 40 9 180.0 10.46 2
+; parameters for types C N CT H1 at LINE(621)
+36 38 40 41 9 0.0 0 0
+; parameters for types C N CT H1 at LINE(621)
+36 38 40 42 9 0.0 0 0
+; parameters for types C N CT C at LINE(522)
+36 38 40 43 9 0.0 1.12968 2
+36 38 40 43 9 0.0 1.75728 3
+; parameters for types H N CT H1 at LINE(621)
+39 38 40 41 9 0.0 0 0
+; parameters for types H N CT H1 at LINE(621)
+39 38 40 42 9 0.0 0 0
+; parameters for types H N CT C at LINE(621)
+39 38 40 43 9 0.0 0 0
+; parameters for types N CT C O at LINE(602)
+38 40 43 44 9 0.0 0 0
+; parameters for types N CT C N at LINE(524)
+38 40 43 45 9 180.0 1.8828 1
+38 40 43 45 9 180.0 6.61072 2
+38 40 43 45 9 180.0 2.3012 3
+; parameters for types H1 CT C O at LINE(549)
+41 40 43 44 9 0.0 3.3472 1
+41 40 43 44 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+41 40 43 45 9 0.0 0 0
+; parameters for types H1 CT C O at LINE(549)
+42 40 43 44 9 0.0 3.3472 1
+42 40 43 44 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+42 40 43 45 9 0.0 0 0
+; parameters for types CT C N H at LINE(628)
+40 43 45 46 9 180.0 10.46 2
+; parameters for types CT C N CT at LINE(628)
+40 43 45 47 9 180.0 10.46 2
+; parameters for types O C N H at LINE(533)
+44 43 45 46 9 180.0 10.46 2
+44 43 45 46 9 0.0 8.368 1
+; parameters for types O C N CT at LINE(628)
+44 43 45 47 9 180.0 10.46 2
+; parameters for types C N CT H1 at LINE(621)
+43 45 47 48 9 0.0 0 0
+; parameters for types C N CT H1 at LINE(621)
+43 45 47 49 9 0.0 0 0
+; parameters for types C N CT C at LINE(522)
+43 45 47 50 9 0.0 1.12968 2
+43 45 47 50 9 0.0 1.75728 3
+; parameters for types H N CT H1 at LINE(621)
+46 45 47 48 9 0.0 0 0
+; parameters for types H N CT H1 at LINE(621)
+46 45 47 49 9 0.0 0 0
+; parameters for types H N CT C at LINE(621)
+46 45 47 50 9 0.0 0 0
+; parameters for types N CT C O at LINE(602)
+45 47 50 51 9 0.0 0 0
+; parameters for types N CT C N at LINE(524)
+45 47 50 52 9 180.0 1.8828 1
+45 47 50 52 9 180.0 6.61072 2
+45 47 50 52 9 180.0 2.3012 3
+; parameters for types H1 CT C O at LINE(549)
+48 47 50 51 9 0.0 3.3472 1
+48 47 50 51 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+48 47 50 52 9 0.0 0 0
+; parameters for types H1 CT C O at LINE(549)
+49 47 50 51 9 0.0 3.3472 1
+49 47 50 51 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+49 47 50 52 9 0.0 0 0
+; parameters for types CT C N H at LINE(628)
+47 50 52 53 9 180.0 10.46 2
+; parameters for types CT C N CT at LINE(628)
+47 50 52 54 9 180.0 10.46 2
+; parameters for types O C N H at LINE(533)
+51 50 52 53 9 180.0 10.46 2
+51 50 52 53 9 0.0 8.368 1
+; parameters for types O C N CT at LINE(628)
+51 50 52 54 9 180.0 10.46 2
+; parameters for types C N CT H1 at LINE(621)
+50 52 54 55 9 0.0 0 0
+; parameters for types C N CT H1 at LINE(621)
+50 52 54 56 9 0.0 0 0
+; parameters for types C N CT C at LINE(522)
+50 52 54 57 9 0.0 1.12968 2
+50 52 54 57 9 0.0 1.75728 3
+; parameters for types H N CT H1 at LINE(621)
+53 52 54 55 9 0.0 0 0
+; parameters for types H N CT H1 at LINE(621)
+53 52 54 56 9 0.0 0 0
+; parameters for types H N CT C at LINE(621)
+53 52 54 57 9 0.0 0 0
+; parameters for types N CT C O at LINE(602)
+52 54 57 58 9 0.0 0 0
+; parameters for types N CT C N at LINE(524)
+52 54 57 59 9 180.0 1.8828 1
+52 54 57 59 9 180.0 6.61072 2
+52 54 57 59 9 180.0 2.3012 3
+; parameters for types H1 CT C O at LINE(549)
+55 54 57 58 9 0.0 3.3472 1
+55 54 57 58 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+55 54 57 59 9 0.0 0 0
+; parameters for types H1 CT C O at LINE(549)
+56 54 57 58 9 0.0 3.3472 1
+56 54 57 58 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+56 54 57 59 9 0.0 0 0
+; parameters for types CT C N H at LINE(628)
+54 57 59 60 9 180.0 10.46 2
+; parameters for types CT C N CT at LINE(628)
+54 57 59 61 9 180.0 10.46 2
+; parameters for types O C N H at LINE(533)
+58 57 59 60 9 180.0 10.46 2
+58 57 59 60 9 0.0 8.368 1
+; parameters for types O C N CT at LINE(628)
+58 57 59 61 9 180.0 10.46 2
+; parameters for types C N CT H1 at LINE(621)
+57 59 61 62 9 0.0 0 0
+; parameters for types C N CT H1 at LINE(621)
+57 59 61 63 9 0.0 0 0
+; parameters for types C N CT C at LINE(522)
+57 59 61 64 9 0.0 1.12968 2
+57 59 61 64 9 0.0 1.75728 3
+; parameters for types H N CT H1 at LINE(621)
+60 59 61 62 9 0.0 0 0
+; parameters for types H N CT H1 at LINE(621)
+60 59 61 63 9 0.0 0 0
+; parameters for types H N CT C at LINE(621)
+60 59 61 64 9 0.0 0 0
+; parameters for types N CT C O at LINE(602)
+59 61 64 65 9 0.0 0 0
+; parameters for types N CT C N at LINE(524)
+59 61 64 66 9 180.0 1.8828 1
+59 61 64 66 9 180.0 6.61072 2
+59 61 64 66 9 180.0 2.3012 3
+; parameters for types H1 CT C O at LINE(549)
+62 61 64 65 9 0.0 3.3472 1
+62 61 64 65 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+62 61 64 66 9 0.0 0 0
+; parameters for types H1 CT C O at LINE(549)
+63 61 64 65 9 0.0 3.3472 1
+63 61 64 65 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+63 61 64 66 9 0.0 0 0
+; parameters for types CT C N H at LINE(628)
+61 64 66 67 9 180.0 10.46 2
+; parameters for types CT C N CT at LINE(628)
+61 64 66 68 9 180.0 10.46 2
+; parameters for types O C N H at LINE(533)
+65 64 66 67 9 180.0 10.46 2
+65 64 66 67 9 0.0 8.368 1
+; parameters for types O C N CT at LINE(628)
+65 64 66 68 9 180.0 10.46 2
+; parameters for types C N CT H1 at LINE(621)
+64 66 68 69 9 0.0 0 0
+; parameters for types C N CT H1 at LINE(621)
+64 66 68 70 9 0.0 0 0
+; parameters for types C N CT C at LINE(522)
+64 66 68 71 9 0.0 1.12968 2
+64 66 68 71 9 0.0 1.75728 3
+; parameters for types H N CT H1 at LINE(621)
+67 66 68 69 9 0.0 0 0
+; parameters for types H N CT H1 at LINE(621)
+67 66 68 70 9 0.0 0 0
+; parameters for types H N CT C at LINE(621)
+67 66 68 71 9 0.0 0 0
+; parameters for types N CT C O at LINE(602)
+66 68 71 72 9 0.0 0 0
+; parameters for types N CT C N at LINE(524)
+66 68 71 73 9 180.0 1.8828 1
+66 68 71 73 9 180.0 6.61072 2
+66 68 71 73 9 180.0 2.3012 3
+; parameters for types H1 CT C O at LINE(549)
+69 68 71 72 9 0.0 3.3472 1
+69 68 71 72 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+69 68 71 73 9 0.0 0 0
+; parameters for types H1 CT C O at LINE(549)
+70 68 71 72 9 0.0 3.3472 1
+70 68 71 72 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+70 68 71 73 9 0.0 0 0
+; parameters for types CT C N H at LINE(628)
+68 71 73 74 9 180.0 10.46 2
+; parameters for types CT C N CT at LINE(628)
+68 71 73 75 9 180.0 10.46 2
+; parameters for types O C N H at LINE(533)
+72 71 73 74 9 180.0 10.46 2
+72 71 73 74 9 0.0 8.368 1
+; parameters for types O C N CT at LINE(628)
+72 71 73 75 9 180.0 10.46 2
+; parameters for types C N CT H1 at LINE(621)
+71 73 75 76 9 0.0 0 0
+; parameters for types C N CT H1 at LINE(621)
+71 73 75 77 9 0.0 0 0
+; parameters for types C N CT C at LINE(522)
+71 73 75 78 9 0.0 1.12968 2
+71 73 75 78 9 0.0 1.75728 3
+; parameters for types H N CT H1 at LINE(621)
+74 73 75 76 9 0.0 0 0
+; parameters for types H N CT H1 at LINE(621)
+74 73 75 77 9 0.0 0 0
+; parameters for types H N CT C at LINE(621)
+74 73 75 78 9 0.0 0 0
+; parameters for types N CT C O at LINE(602)
+73 75 78 79 9 0.0 0 0
+; parameters for types N CT C N at LINE(524)
+73 75 78 80 9 180.0 1.8828 1
+73 75 78 80 9 180.0 6.61072 2
+73 75 78 80 9 180.0 2.3012 3
+; parameters for types H1 CT C O at LINE(549)
+76 75 78 79 9 0.0 3.3472 1
+76 75 78 79 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+76 75 78 80 9 0.0 0 0
+; parameters for types H1 CT C O at LINE(549)
+77 75 78 79 9 0.0 3.3472 1
+77 75 78 79 9 180.0 0.33472 3
+; parameters for types H1 CT C N at LINE(602)
+77 75 78 80 9 0.0 0 0
+; parameters for types CT C N H at LINE(628)
+75 78 80 81 9 180.0 10.46 2
+; parameters for types CT C N CT at LINE(628)
+75 78 80 82 9 180.0 10.46 2
+; parameters for types O C N H at LINE(533)
+79 78 80 81 9 180.0 10.46 2
+79 78 80 81 9 0.0 8.368 1
+; parameters for types O C N CT at LINE(628)
+79 78 80 82 9 180.0 10.46 2
+; parameters for types C N CT H1 at LINE(621)
+78 80 82 83 9 0.0 0 0
+; parameters for types C N CT H1 at LINE(621)
+78 80 82 84 9 0.0 0 0
+; parameters for types C N CT C at LINE(522)
+78 80 82 85 9 0.0 1.12968 2
+78 80 82 85 9 0.0 1.75728 3
+; parameters for types H N CT H1 at LINE(621)
+81 80 82 83 9 0.0 0 0
+; parameters for types H N CT H1 at LINE(621)
+81 80 82 84 9 0.0 0 0
+; parameters for types H N CT C at LINE(621)
+81 80 82 85 9 0.0 0 0
+; parameters for types N CT C O2 at LINE(602)
+80 82 85 86 9 0.0 0 0
+; parameters for types N CT C O2 at LINE(602)
+80 82 85 87 9 0.0 0 0
+; parameters for types H1 CT C O2 at LINE(602)
+83 82 85 86 9 0.0 0 0
+; parameters for types H1 CT C O2 at LINE(602)
+83 82 85 87 9 0.0 0 0
+; parameters for types H1 CT C O2 at LINE(602)
+84 82 85 86 9 0.0 0 0
+; parameters for types H1 CT C O2 at LINE(602)
+84 82 85 87 9 0.0 0 0
+
+[ dihedrals ] 
+;  ai    aj    ak    al funct            c0            c1            c2            c3
+; parameters for types CT N C O at LINE(502)
+5 10 8 9 4 180.00 43.932 2
+; parameters for types C CT N H at LINE(473)
+8 12 10 11 4 180.00 4.6024 2
+; parameters for types CT N C O at LINE(502)
+12 17 15 16 4 180.00 43.932 2
+; parameters for types C CT N H at LINE(473)
+15 19 17 18 4 180.00 4.6024 2
+; parameters for types CT N C O at LINE(502)
+19 24 22 23 4 180.00 43.932 2
+; parameters for types C CT N H at LINE(473)
+22 26 24 25 4 180.00 4.6024 2
+; parameters for types CT N C O at LINE(502)
+26 31 29 30 4 180.00 43.932 2
+; parameters for types C CT N H at LINE(473)
+29 33 31 32 4 180.00 4.6024 2
+; parameters for types CT N C O at LINE(502)
+33 38 36 37 4 180.00 43.932 2
+; parameters for types C CT N H at LINE(473)
+36 40 38 39 4 180.00 4.6024 2
+; parameters for types CT N C O at LINE(502)
+40 45 43 44 4 180.00 43.932 2
+; parameters for types C CT N H at LINE(473)
+43 47 45 46 4 180.00 4.6024 2
+; parameters for types CT N C O at LINE(502)
+47 52 50 51 4 180.00 43.932 2
+; parameters for types C CT N H at LINE(473)
+50 54 52 53 4 180.00 4.6024 2
+; parameters for types CT N C O at LINE(502)
+54 59 57 58 4 180.00 43.932 2
+; parameters for types C CT N H at LINE(473)
+57 61 59 60 4 180.00 4.6024 2
+; parameters for types CT N C O at LINE(502)
+61 66 64 65 4 180.00 43.932 2
+; parameters for types C CT N H at LINE(473)
+64 68 66 67 4 180.00 4.6024 2
+; parameters for types CT N C O at LINE(502)
+68 73 71 72 4 180.00 43.932 2
+; parameters for types C CT N H at LINE(473)
+71 75 73 74 4 180.00 4.6024 2
+; parameters for types CT N C O at LINE(502)
+75 80 78 79 4 180.00 43.932 2
+; parameters for types C CT N H at LINE(473)
+78 82 80 81 4 180.00 4.6024 2
+; parameters for types CT O2 C O2 at LINE(499)
+82 86 85 87 4 180.00 43.932 2
+
+; Include Position restraint file
+
+; Include water topology
+[ moleculetype ] 
+; molname	nrexcl
+SOL		2 
+
+[ atoms ] 
+; id  at type     res nr  res name  at name  cg nr  charge    mass
+  1   OW          1       SOL       OW       1      -0.834    16.00000
+  2   HW          1       SOL       HW1      1       0.417     1.00800
+  3   HW          1       SOL       HW2      1       0.417     1.00800
+
+
+[ settles ] 
+; OW	funct	doh	dhh
+1       1       0.09572 0.15139 
+
+[ exclusions ] 
+1	2	3 
+2	1	3 
+3	1	2 
+
+
+
+; Include topology for ions
+[ moleculetype ] 
+; molname       nrexcl
+IB+             1        ; big positive ion
+
+[ atoms ] 
+; id    at type         res nr  residu name     at name  cg nr  charge
+1       IB              1       IB+             IB       1      1.00000
+
+
+[ moleculetype ] 
+; molname       nrexcl
+CA              1 
+
+[ atoms ] 
+; id    at type         res nr  residu name     at name  cg nr  charge
+1       C0              1       CA              CA       1      2.00000
+
+
+[ moleculetype ] 
+; molname       nrexcl
+CL              1 
+
+[ atoms ] 
+; id    at type         res nr  residu name     at name  cg nr  charge
+1       Cl              1       CL              CL       1      -1.00000
+
+
+[ moleculetype ] 
+; molname       nrexcl
+NA              1 
+
+[ atoms ] 
+; id    at type         res nr  residu name     at name  cg nr  charge
+1       Na              1       NA              NA       1      1.00000
+
+
+[ moleculetype ] 
+; molname       nrexcl
+MG              1 
+
+[ atoms ] 
+; id    at type         res nr  residu name     at name  cg nr  charge
+1       MG              1       MG              MG       1      2.00000
+
+
+[ moleculetype ] 
+; molname       nrexcl
+K               1 
+
+[ atoms ] 
+; id    at type         res nr  residu name     at name  cg nr  charge
+1       K               1       K               K        1      1.00000
+
+
+[ moleculetype ] 
+; molname       nrexcl
+RB              1 
+
+[ atoms ] 
+; id    at type         res nr  residu name     at name  cg nr  charge
+1       Rb              1       RB              RB       1      1.00000
+
+
+[ moleculetype ] 
+; molname       nrexcl
+CS              1 
+
+[ atoms ] 
+; id    at type         res nr  residu name     at name  cg nr  charge
+1       Cs              1       CS              CS       1      1.00000
+
+
+[ moleculetype ] 
+; molname       nrexcl
+LI              1 
+
+[ atoms ] 
+; id    at type         res nr  residu name     at name  cg nr  charge
+1       Li              1       LI              LI       1      1.00000
+
+
+[ moleculetype ] 
+; molname       nrexcl
+ZN              1 
+
+[ atoms ] 
+; id    at type         res nr  residu name     at name  cg nr  charge
+1       Zn              1       ZN              ZN       1      2.00000
+
+[ system ] 
+; Name
+Protein in water 
+
+[ molecules ] 
+; Compound        #mols
+Protein             1 
+SOL              6066 

@@ -1,0 +1,4 @@
+# Below: 6 is amber99-ildn and 1 is tip3p water
+# pro.pdb is a peptide (GLY)_12
+printf "6 \n 1" | gmx_mpi pdb2gmx -f pro.pdb -ignh
+
