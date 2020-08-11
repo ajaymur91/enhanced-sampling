@@ -1,8 +1,10 @@
 # enhanced-sampling
 Enhanced sampling methods for MD
 
-#REST2# Citation:
+# REST2
+
 **Article:** [![DOI](https://img.shields.io/badge/doi-10.1021/jp204407d-blue.svg?style=flat&labelColor=whitesmoke)](https://doi.org/10.1021/jp204407d)
+
 @article{wang2011replica,
   title={Replica exchange with solute scaling: a more efficient version of replica exchange with solute tempering (REST2)},
   author={Wang, Lingle and Friesner, Richard A and Berne, BJ},
@@ -13,9 +15,12 @@ Enhanced sampling methods for MD
   year={2011},
   publisher={ACS Publications}
 }
-https://doi.org/10.1021/ct5009087
+
+# RECT
+
 **Article:** [![DOI](https://img.shields.io/badge/doi-10.1021/ct5009087-blue.svg?style=flat&labelColor=whitesmoke)](https://doi.org/10.1021/ct5009087)
-#RECT
+
+
 @article{gil2015enhanced,
   title={Enhanced conformational sampling using replica exchange with collective-variable tempering},
   author={Gil-Ley, Alejandro and Bussi, Giovanni},
