@@ -13,8 +13,8 @@
 ```
 	cp system.top processed.top
 ```
-# user edits processed.top (where each "hot" atom has a "_" appended to the atom type) 
-# note the _ added in the [ atoms ] section for the peptide
+- user edits processed.top (where each "hot" atom has a "_" appended to the atom type) 
+- note the _ added in the [ atoms ] section for the peptide
 
 # four replicas (starling 4 gpus's per node - so using four replicas for max hardware efficiency.)
 	nrep=4
