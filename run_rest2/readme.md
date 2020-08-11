@@ -1,11 +1,13 @@
-#REST2 simulations using gromacs+plumed
-	# spack install gromacs@2019.4 +cuda+plumed
-        #spack load gromacs@2019.4
-
-        cp ../min_eq/npt.gro ./system.gro
+# REST2 simulations using gromacs+plumed
+```
+	 spack install gromacs@2019.4 +cuda+plumed
+         spack load gromacs@2019.4
+         cp ../min_eq/npt.gro ./system.gro
+```
 # Generate system.top (a standalone topology that does not require itp files)
+```
 	gmx_mpi grompp -f ../mdp/md.mdp -c system.gro -p ../system/topol.top -pp system.top
-
+```
 
 # Create processed.top that defines which solute atoms will be "heated" - see below comments
 	cp system.top processed.top
