@@ -10,9 +10,10 @@
 ```
 
 # Create processed.top that defines which solute atoms will be "heated" - see below comments
+```
 	cp system.top processed.top
-
-# edit processed.top (where each "hot" atom has a "_" appended to the atom type) 
+```
+# user edits processed.top (where each "hot" atom has a "_" appended to the atom type) 
 # note the _ added in the [ atoms ] section for the peptide
 
 # four replicas (starling 4 gpus's per node - so using four replicas for max hardware efficiency.)
@@ -23,6 +24,7 @@
 	tmax=400
 
 # build geometric progression of temperatures
+```
 	list=$(
 	awk -v n=$nrep \
     	-v tmin=$tmin \
@@ -34,11 +36,12 @@
 	}'
 	)
 	echo "intermediate temperatures are $list"
-
+```
 # clean directory (pre-existing folders)
 	#rm -fr topol*
 
-#Create the replica folders
+# Create the replica folders
+```
      for((i=0;i<nrep;i++))
 	do
 	mkdir topol$i #might throw error if folder exists - ignore
@@ -50,6 +53,8 @@
 	# prepare tpr files
   	mpirun -n 1 gmx_mpi grompp -c system.gro -o topol"$i"/topol.tpr -f ../mdp/md.mdp -p topol"$i"/topol.top
 	done
-
-#run hrex
-	#sbatch run_hrex.sh
+```
+# run hrex
+```
+	sbatch run_hrex.sh
+```
